@@ -1,45 +1,14 @@
----
-theme: default
-background: https://source.unsplash.com/1920x1080/?logic,circuits
-class: text-center
-highlighter: shiki
-lineNumbers: false
-info: |
-  ## Lógica Booleana
-  Sistemas Digitais 1 - ME575
-  Universidade Federal de Pernambuco
-drawings:
-  persist: false
-transition: slide-left
-title: Lógica Booleana
-mdc: true
----
 
 # Lógica Booleana
 
-ME575 - Sistemas Digitais 1
+### Prof. João Paulo Cerquinho Cajueiro
+#### Baseado em slides de Prof. José Rodrigues de Oliveira Neto
 
-**José Rodrigues de Oliveira Neto**  
 Universidade Federal de Pernambuco  
 Departamento de Engenharia Mecânica
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Pressione espaço para a próxima página <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
----
-layout: default
 ---
 
-# Sumário
-
-<Toc maxDepth="1"></Toc>
-
----
-layout: section
----
 
 # Álgebra Booleana
 
@@ -47,19 +16,13 @@ layout: section
 
 # Introdução
 
-<v-clicks>
+- Desenvolvida por George Boole (1815-1864) em seu livro ***"An Investigation of the Laws of Thought on Which are Founded the Mathematical Theories of Logic and Probabilities"*** de 1854
 
-- A álgebra Booleana foi desenvolvida por George Boole (1815-1864) em seu livro ***"An Investigation of the Laws of Thought on Which are Founded the Mathematical Theories of Logic and Probabilities"*** de 1854
-
-- Coube a Claude Shannon (1916-2001) juntar a lógica booleana aos circuitos chaveados com relés em sua dissertação de mestrado ***"A Symbolic Analysis of Relay and Switching Circuits"*** de 1938
-
-</v-clicks>
+- Claude Shannon (1916-2001) juntou a lógica booleana aos circuitos chaveados com relés em sua dissertação de mestrado ***"A Symbolic Analysis of Relay and Switching Circuits"*** de 1938
 
 ---
 
-# Aplicações da Álgebra Booleana
-
-<v-clicks>
+<!-- # Aplicações da Álgebra Booleana
 
 - Sistemas digitais podem ser **analisados** utilizando-se a lógica booleana
 
@@ -69,17 +32,11 @@ layout: section
 
 - **Decisões** - Saídas do Sistema
 
-</v-clicks>
-
----
+--- -->
 
 # Constantes e Variáveis Booleanas
 
-<v-clicks>
-
-- As variáveis booleanas só podem ter dois estados possíveis: 0 ou 1 também chamados de **níveis lógicos**
-
-</v-clicks>
+Dois estados possíveis: 0 ou 1 também chamados de **níveis lógicos**
 
 <div class="flex justify-center mt-8">
 
@@ -102,9 +59,9 @@ layout: section
 - Usualmente, utilizamos letras maiúsculas para representar variáveis booleanas
 
 - **Exemplos:**
-  - A = 1
-  - B = 0  
-  - C = 0
+  - $A = 1$
+  - $B = 0$  
+  - $C = 0$
 
 </v-clicks>
 
@@ -112,54 +69,52 @@ layout: section
 
 # Operações Lógicas
 
-<v-clicks>
-
 As operações básicas na álgebra booleana são:
 
 - **`OR` - 'OU' lógico**, que também usualmente recebe o sinal '+'
-  - **Exemplo:** **A** `OR` **B** = **A** + **B**
+  - $A \~{\texttt{OR}}\~ B = A + B$
 
 - **`AND` - 'E' lógico**, que também usualmente recebe o sinal '×'
-  - **Exemplo:** **A** `AND` **B** = **A** × **B** = **A** . **B** = **AB**
+  -  $A \~{\texttt{AND}}\~ B = A \times B = A \cdot B = AB$
 
 - **`NOT` - 'NÃO' lógico**, que indica a inversão do valor da variável
-  - **Exemplo:** `NOT` **A** = $\overline{A}$
-
-</v-clicks>
+  - $\texttt{NOT} A = \overline{A}$
 
 ---
 
 # Tabela Verdade
 
-<v-clicks>
+<div style="display: flex; gap: 2em;">
 
-- Técnica usada para descrever como a saída de um circuito lógico depende dos níveis lógicos presentes nas entradas do circuito
+<div style="flex:1;">
+
+- Descreve saída de um circuito lógico para cada possibilidade das entradas
+
+</div>
+<div style="flex:1;">
 
 - **Exemplo:**
   - **Variáveis de entrada:** **A** (Sensor de Temperatura) e **B** (Sensor de Nível)
   - **Variável de saída:** **C** (Válvula)
 
-</v-clicks>
 
-<div class="flex justify-center mt-4">
 
-| **A** | **B** | **C** |
-|-------|-------|-------|
-| 0     | 0     | 1     |
-| 0     | 1     | 0     |
-| 1     | 0     | 0     |
-| 1     | 1     | 0     |
+| **A** | **B** | | **C** |
+|-------|-------|-|-------|
+| 0     | 0     | | 1     |
+| 0     | 1     | | 0     |
+| 1     | 0     | | 0     |
+| 1     | 1     | | 0     |
 
+</div>
 </div>
 
 ---
 
 # Construção de Tabelas Verdade
 
-<div grid="~ cols-2 gap-4">
-<div>
-
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:3;">
 
 - A tabela pode ter quantas colunas forem necessárias dependendo do número de entradas
 
@@ -167,10 +122,8 @@ As operações básicas na álgebra booleana são:
 
 - Para não esquecer nenhum caso, aconselha-se seguir a contagem binária
 
-</v-clicks>
-
 </div>
-<div>
+<div style="flex:1;font-size: 0.5em;">
 
 <div class="text-xs">
 
@@ -202,36 +155,27 @@ As operações básicas na álgebra booleana são:
 
 # Operação OU (OR)
 
-<v-clicks>
 
 - A saída é verdadeira sempre que ao menos uma das entradas é verdadeira e só é falsa se todas as entradas forem falsas
 
-</v-clicks>
+### Símbolo e Tabela Verdade
 
-<div class="flex justify-center mt-8">
+<div style="display: flex; gap: 2em;">
 
-## Símbolo e Tabela Verdade
+<div style="flex:1;">
 
-<div grid="~ cols-2 gap-8">
-<div>
-
-```
-A ----\
-       >---- Y = A + B
-B ----/
-```
+![Porta OU](images/or.svg)
 
 </div>
-<div>
+<div style="flex:1;">
 
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 1 |
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 0 |
+| 0 | 1 | | 1 |
+| 1 | 0 | | 1 |
+| 1 | 1 | | 1 |
 
-</div>
 </div>
 
 </div>
@@ -244,30 +188,23 @@ B ----/
 
 - A saída é verdadeira se e apenas se todas as entradas forem verdadeiras
 
-</v-clicks>
-
-<div class="flex justify-center mt-8">
-
 ## Símbolo e Tabela Verdade
 
-<div grid="~ cols-2 gap-8">
-<div>
+<div style="display: flex; gap: 2em;">
 
-```
-A ----\
-       &---- Y = A · B
-B ----/
-```
+<div style="flex:1;">
+
+![Porta AND](images/and.svg)
 
 </div>
-<div>
+<div style="flex:1;">
 
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 0 |
+| 0 | 1 | | 0 |
+| 1 | 0 | | 0 |
+| 1 | 1 | | 1 |
 
 </div>
 </div>
@@ -278,38 +215,27 @@ B ----/
 
 # Operação NÃO (NOT) - Inversor
 
-<v-clicks>
-
 - É realizada em uma única variável e inverte o valor lógico dela
-
-</v-clicks>
-
-<div class="flex justify-center mt-8">
 
 ## Símbolo e Tabela Verdade
 
-<div grid="~ cols-2 gap-8">
-<div>
+<div style="display: flex; gap: 2em;">
 
-```
-A ----o---- Y = Ā
-```
+<div style="flex:1;">
 
-</div>
-<div>
-
-| A | Y |
-|---|---|
-| 0 | 1 |
-| 1 | 0 |
+![Porta NOT](images/not.svg)
 
 </div>
-</div>
+<div style="flex:1;">
+
+| A | | Y |
+|---|-|---|
+| 0 | | 1 |
+| 1 | | 0 |
 
 </div>
+</div>
 
----
-layout: section
 ---
 
 # Postulados da Álgebra de Boole
@@ -362,12 +288,8 @@ layout: section
 
 # Postulado 5 - Distributividade
 
-<v-clicks>
-
-- **A** + (**B** · **C**) = (**A** + **B**) · (**A** + **C**)
 - **A** · (**B** + **C**) = (**A** · **B**) + (**A** · **C**)
-
-</v-clicks>
+- **A** + (**B** · **C**) = (**A** + **B**) · (**A** + **C**)
 
 ---
 

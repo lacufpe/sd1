@@ -1,44 +1,11 @@
----
-theme: default
-background: https://source.unsplash.com/1920x1080/?mathematics,binary
-class: text-center
-highlighter: shiki
-lineNumbers: false
-info: |
-  ## Aritmética Binária
-  Sistemas Digitais 1 - ME575
-  Universidade Federal de Pernambuco
-drawings:
-  persist: false
-transition: slide-left
-title: Aritmética Binária
-mdc: true
----
-
 # Aritmética Binária
 
-ME575 - Sistemas Digitais 1
+### Prof. João Paulo Cerquinho Cajueiro
+#### Baseado em slides de Prof. José Rodrigues de Oliveira Neto
 
-**José Rodrigues de Oliveira Neto**  
 Universidade Federal de Pernambuco  
 Departamento de Engenharia Mecânica
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Pressione espaço para a próxima página <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
----
-layout: default
----
-
-# Sumário
-
-<Toc maxDepth="1"></Toc>
-
----
-layout: section
 ---
 
 # Introdução
@@ -47,18 +14,12 @@ layout: section
 
 # Introdução
 
-<v-clicks>
+- Podemos representar qualquer valor numérico no sistema binário (incluindo números negativos e fracionários)
 
-- Como vimos na última aula, podemos representar qualquer valor numérico no sistema binário (incluindo números negativos e fracionários)
+- Possível representar números em binário --> realizar operações aritméticas com eles
 
-- Portanto, se é possível representar números em binário, deve ser possível realizar operações aritméticas com eles
+- Mesmas regras que utilizamos para as operações na base decimal, sendo que agora nossos dígitos só podem ter 2 valores: {0,1}
 
-- De fato, as operações seguem as mesmas regras que utilizamos para as operações na base decimal, sendo que agora nossos dígitos só podem ter 2 valores: {0,1}
-
-</v-clicks>
-
----
-layout: section
 ---
 
 # Adição
@@ -67,25 +28,22 @@ layout: section
 
 # Adição Binária
 
-<div grid="~ cols-2 gap-4">
-<div>
+<div style="display: flex; gap: 2em;">
 
-<v-clicks>
+<div style="flex:1;">
 
 - A adição binária é intuitiva
 
-- Na tabela ao lado temos $S = A + B$, em que $A$ e $B$ $\in \{0,1\}$
+- Na tabela ao lado temos $S = A + B$, em que $A$ e $B$ $\in \\{0,1\\}$
 
 - Como $1 + 1 = 2_{10} = 10_2$, por isso o resultado da última linha da Tabela é $S = 0$ e o *carry* $= 1$
 
 - Como ocorre como fazemos em decimal, transportamos o valor *carry* para o bit de ordem superior
 
-</v-clicks>
-
 </div>
-<div>
+<div style="flex:1;">
 
-## Tabela da Adição
+#### Tabela da Adição
 
 | A | B | S | Carry |
 |---|---|---|-------|
@@ -101,7 +59,9 @@ layout: section
 
 # Exemplo de Adição Binária
 
-<div class="flex justify-center">
+<div style="display: flex; gap: 2em;">
+
+<div style="flex:1;">
 
 ```
     1011₂  (11₁₀)
@@ -112,16 +72,18 @@ layout: section
 
 </div>
 
-<v-clicks>
+<div style="flex:1;">
 
 **Passo a passo:**
+
 1. 1 + 1 = 10₂ → escreve 0, vai 1
 2. 1 + 0 + 1(carry) = 10₂ → escreve 0, vai 1  
 3. 0 + 1 + 1(carry) = 10₂ → escreve 0, vai 1
 4. 1 + 1 + 1(carry) = 11₂ → escreve 1, vai 1
 5. 0 + 0 + 1(carry) = 1₂ → escreve 1
 
-</v-clicks>
+</div>
+</div>
 
 ---
 
@@ -132,10 +94,6 @@ layout: section
 a) $10000001 + 10000001$  
 b) $10000001 + 00011001$
 
-<div class="h-40"></div>
-
----
-layout: section
 ---
 
 # Subtração
@@ -144,10 +102,9 @@ layout: section
 
 # Subtração Binária
 
-<div grid="~ cols-2 gap-4">
-<div>
+<div style="display: flex; gap: 2em;">
 
-<v-clicks>
+<div style="flex:1;">
 
 - A subtração binária é executada da mesma forma que operamos a subtração decimal
 
@@ -155,12 +112,10 @@ layout: section
 
 - No entanto, é apenas o ato de "emprestar um" do dígito seguinte como também ocorre na aritmética na base 10
 
-</v-clicks>
-
 </div>
 <div>
 
-## Tabela da Subtração
+#### Tabela da Subtração
 
 | A | B | S | Borrow |
 |---|---|---|--------|
@@ -176,10 +131,8 @@ layout: section
 
 # Algoritmo de Subtração Decimal
 
-<div grid="~ cols-2 gap-4">
-<div>
-
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:2;">
 
 **Seja o minuendo 93 e o subtraendo 78:**
 
@@ -190,10 +143,8 @@ layout: section
    - **b)** Subtraímos -1 do minuendo da dezena: 9-1 = 8  
    - **c)** Subtraímos 9-7 = 2, e depois subtraímos o valor emprestado 2-1 = 1
 
-</v-clicks>
-
 </div>
-<div class="text-center">
+<div class="text-center"  style="flex:1;">
 
 ```
    93
@@ -209,7 +160,8 @@ layout: section
 
 # Exemplo de Subtração Binária
 
-<div class="flex justify-center">
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
 ```
    1101₂  (13₁₀)
@@ -220,7 +172,7 @@ layout: section
 
 </div>
 
-<v-clicks>
+<div style="flex:2;">
 
 **Passo a passo:**
 1. 1 - 0 = 1
@@ -228,21 +180,22 @@ layout: section
 3. 1 - 0 - 1(borrow) = 0
 4. 1 - 1 = 0
 
-</v-clicks>
+</div>
+</div>
 
 ---
 
 # Overflow na Subtração
 
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:2;">
 
 - Se nenhuma coluna for capaz de pagar o que foi emprestado a uma coluna anterior, o *carry* resultará '1'
 
 - Isso pode ser interpretado como um sinal negativo para resultado da subtração, ou um *overflow*, indicando incapacidade do circuito de representar o resultado correto para a operação com aquela quantidade de bits
 
-</v-clicks>
-
-<div class="flex justify-center mt-4">
+</div>
+<div style="flex:1;" class="flex:1 justify-center mt-4">
 
 ```
    0101₂  (5₁₀)
@@ -252,26 +205,21 @@ layout: section
 ```
 
 </div>
+</div>
 
 ---
 
 # Vantagem do Complemento para 2
 
-<v-clicks>
-
 - Uma vantagem da representação complemento para 2 (Cp2) é que as operações de soma e subtração apresentam resultados diretos, sem necessidade de conversão
 
 - Em outras palavras, subtração de um número representado em Cp2 é simplesmente uma questão de inverter o sinal desse número e somar com outro operando
 
-</v-clicks>
-
-<div class="flex justify-center mt-4">
 
 **Exemplo:** $A - B = A + (-B)$
 
 Onde $-B$ é obtido pelo complemento para 2 de $B$
 
-</div>
 
 ---
 
@@ -283,10 +231,6 @@ a) $11100001 - 00011001$
 b) $01100001 - 10011001$  
 c) $01100001 - 00011001$
 
-<div class="h-40"></div>
-
----
-layout: section
 ---
 
 # Multiplicação
@@ -295,21 +239,16 @@ layout: section
 
 # Multiplicação Binária
 
-<div grid="~ cols-2 gap-4">
-<div>
-
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
 - A multiplicação também é intuitiva e direta
 
 - Para multiplicar vetores binários seguimos as regras da tabela ao lado e o algoritmo de multiplicação de números com representação posicional
 
-</v-clicks>
-
 </div>
-<div>
+<div style="flex:1;">
 
-## Tabela da Multiplicação
 
 | A | B | A × B |
 |---|---|-------|
@@ -335,16 +274,14 @@ layout: section
      0000    (1011 × 0, deslocado)
     1011     (1011 × 1, deslocado)
     -------
-   110111₂   (55₁₀)
+    110111₂  (55₁₀)
 ```
 
 </div>
 
-<v-clicks>
-
+<div class="fragment">
 **Verificação:** $11 \times 5 = 55$ ✓
-
-</v-clicks>
+</div>
 
 ---
 
@@ -364,10 +301,6 @@ Para multiplicação binária em complemento para 2, existem algoritmos específ
 a) $00010011 \times 00000011$  
 b) $10010011 \times 00000011$
 
-<div class="h-40"></div>
-
----
-layout: section
 ---
 
 # Divisão
@@ -376,45 +309,48 @@ layout: section
 
 # Divisão Binária
 
-<v-clicks>
-
 - A divisão não é tão trivial quanto as operações anteriores, porque as regras da divisão não se aplicam a todos possíveis valores para dois bits:
-  - $\frac{A}{B}: \frac{1}{1} = 1$
-  - $\frac{A}{B}: \frac{0}{1} = 0$
+  - $1/1 = 1$
+  - $0/1 = 0$
 
 - No entanto não podemos dividir por 0
-
-</v-clicks>
 
 ---
 
 # Algoritmo de Divisão
+## Divisão por subtração
+<div style="display: flex; gap: 2em;">
+<div style="flex:2;">
 
-<v-clicks>
 
-- Um algoritmo possível para divisão é a partir de subtrações sucessivas
-
-- **Divisão Euclidiana:** $\frac{d_i}{d_v}$
+### Divisão Euclidiana:
+ $\frac{d_i}{d_v}$
 
 $$d_i = d_v \times q + r$$
 
-- em que:
-  - $d_i$ = dividendo
-  - $d_v$ = divisor  
-  - $q$ = quociente
-  - $r$ = resto
+</div>
+<div style="flex:1;text-align:left;">
 
-- $\{d_i, d_v, q, r\} \in \mathbb{N}$ e $d_v \neq 0$
+$d_i$ - dividendo
 
-</v-clicks>
+$d_v$ - divisor
+
+$q$ - quociente
+
+$r$ - resto
+
+$\{d_i, d_v, q, r\} \in \mathbb{N}$ e $d_v \neq 0$
+
+</div>
 
 ---
 
-# Exemplo de Divisão por Subtração
+# Exemplo
 
-**Dividir 13 ÷ 3:**
+## Dividir 13 ÷ 3:
 
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:2;">
 
 1. $13 - 3 = 10$ (1ª subtração)
 2. $10 - 3 = 7$ (2ª subtração)  
@@ -422,17 +358,17 @@ $$d_i = d_v \times q + r$$
 4. $4 - 3 = 1$ (4ª subtração)
 5. $1 < 3$ → parar
 
+</div>
+<div style="flex:2;" class="fragment">
+
 **Resultado:** $q = 4$, $r = 1$
+
+<div class="fragment">
 
 **Verificação:** $13 = 3 \times 4 + 1$ ✓
 
-</v-clicks>
-
----
-layout: section
----
-
-# Bibliografia
+</div>
+</div>
 
 ---
 
@@ -441,12 +377,3 @@ layout: section
 - RANHEL, João. **"Eletrônica Digital, Verilog e FPGA"**, 1ª ed., Clube do Autor, 2021.
 
 - TOCCI, R. J., WIDMER, N. S., **"Sistemas Digitais Princípios e Aplicações"**, 11ª ed., Prentice Hall, 2011.
-
----
-layout: end
----
-
-# Obrigado!
-
-**Perguntas?**
-

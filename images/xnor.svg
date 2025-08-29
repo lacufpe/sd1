@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Digital by H.Neemann -->
+
+<!-- created: Thu Aug 28 21:01:24 BRT 2025 -->
+
+<svg
+   width="42.1614mm"
+   height="9.848527mm"
+   viewBox="318 158 281.07601 65.656847"
+   version="1.1"
+   id="svg29"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs29" />
+  <path
+     d="m 518,190.82842 h 60"
+     stroke="#0000ff"
+     stroke-width="4"
+     fill="none"
+     id="path2"
+     style="stroke-linecap:square" />
+  <path
+     d="m 338,210.82842 h 80 14"
+     stroke="#0000ff"
+     stroke-width="4"
+     fill="none"
+     id="path6"
+     style="stroke-linecap:square" />
+  <path
+     d="m 338,170.82842 h 80 14"
+     stroke="#0000ff"
+     stroke-width="4"
+     fill="none"
+     id="path12"
+     style="stroke-linecap:square" />
+  <g
+     id="g27"
+     style="stroke-linecap:square"
+     transform="translate(-2,-369.17158)">
+    <path
+       d="m 450,590 h -20 c 10,-16 10,-44 0,-60 h 20 c 20,0 40,10 50,30 -10,20 -30,30 -50,30 z"
+       stroke="#000000"
+       stroke-width="4"
+       fill="none"
+       id="path23" />
+    <path
+       d="m 420,590 c 10,-10 10,-50 0,-60"
+       stroke="#000000"
+       stroke-width="4"
+       fill="none"
+       id="path24" />
+    <circle
+       cx="510"
+       cy="560"
+       r="9"
+       stroke="#000000"
+       stroke-width="4"
+       fill="none"
+       id="circle24" />
+  </g>
+  <g
+     id="g40"
+     transform="translate(-2,-9.3381971)">
+    <g
+       id="g38"
+       style="stroke-linecap:square"
+       transform="translate(0,10.583334)">
+      <text
+         text-anchor="start"
+         x="320"
+         y="178"
+         fill="#000000"
+         style="font-size:24px"
+         id="text37">A</text>
+    </g>
+    <g
+       id="g39"
+       style="stroke-linecap:square"
+       transform="translate(2.0223325e-7,50.708016)">
+      <text
+         text-anchor="start"
+         x="320"
+         y="178"
+         fill="#000000"
+         style="font-size:24px"
+         id="text38">B</text>
+      <text
+         text-anchor="start"
+         x="587.492"
+         y="158.12213"
+         fill="#000000"
+         style="font-size:24px"
+         id="text39">Y</text>
+    </g>
+  </g>
+</svg>

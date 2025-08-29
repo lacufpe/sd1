@@ -1,44 +1,11 @@
----
-theme: default
-background: https://source.unsplash.com/1920x1080/?electronics,circuits
-class: text-center
-highlighter: shiki
-lineNumbers: false
-info: |
-  ## Circuitos Combinacionais no Logisim
-  Sistemas Digitais 1 - ME575
-  Universidade Federal de Pernambuco
-drawings:
-  persist: false
-transition: slide-left
-title: Circuitos Combinacionais no Logisim
-mdc: true
----
+# Circuitos Combinacionais no Digital
 
-# Circuitos Combinacionais no Logisim
+### Prof. João Paulo Cerquinho Cajueiro
+#### Baseado em slides de Prof. José Rodrigues de Oliveira Neto
 
-ME575 - Sistemas Digitais 1
-
-**José Rodrigues de Oliveira Neto**  
 Universidade Federal de Pernambuco  
 Departamento de Engenharia Mecânica
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Pressione espaço para a próxima página <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
----
-layout: default
----
-
-# Sumário
-
-<Toc maxDepth="1"></Toc>
-
----
-layout: section
 ---
 
 # Mais Portas Lógicas
@@ -47,76 +14,48 @@ layout: section
 
 # Porta NAND
 
-<v-clicks>
-
 - A porta NAND é uma porta AND seguida de um inversor
 - Sua saída é o complemento da operação AND
 - **Equação:** Y = $\overline{A \cdot B}$
 
-</v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
-<div class="flex justify-center mt-8">
+<img src="images/nand.svg" style="width:60%; height:auto;"/>
+</div>
+<div style="flex:1;">
 
-## Símbolo e Tabela Verdade
-
-<div grid="~ cols-2 gap-8">
-<div>
-
-```
-A ----\
-       &o---- Y = A̅·B̅ = A̅ NAND B̅
-B ----/
-```
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 1 |
+| 0 | 1 | | 1 |
+| 1 | 0 | | 1 |
+| 1 | 1 | | 0 |
 
 </div>
-<div>
-
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 1 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
-
-</div>
-</div>
-
 </div>
 
 ---
 
 # Porta NOR
 
-<v-clicks>
-
 - A porta NOR é uma porta OR seguida de um inversor
 - Sua saída é o complemento da operação OR
 - **Equação:** Y = $\overline{A + B}$
 
-</v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
-<div class="flex justify-center mt-8">
-
-## Símbolo e Tabela Verdade
-
-<div grid="~ cols-2 gap-8">
-<div>
-
-```
-A ----\
-       >o---- Y = A̅+B̅ = A̅ NOR B̅
-B ----/
-```
-
+<img src="images/nor.svg" style="width:60%; height:auto;"/>
 </div>
-<div>
+<div style="flex:1;">
 
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 1 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 0 |
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 1 |
+| 0 | 1 | | 0 |
+| 1 | 0 | | 0 |
+| 1 | 1 | | 0 |
 
 </div>
 </div>
@@ -127,35 +66,22 @@ B ----/
 
 # Porta XOR (OU Exclusivo)
 
-<v-clicks>
-
 - A porta XOR produz saída alta quando as entradas são diferentes
 - **Equação:** Y = A ⊕ B = A·$\overline{B}$ + $\overline{A}$·B
 
-</v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
-<div class="flex justify-center mt-8">
-
-## Símbolo e Tabela Verdade
-
-<div grid="~ cols-2 gap-8">
-<div>
-
-```
-A ----\
-       =1---- Y = A ⊕ B
-B ----/
-```
-
+<img src="images/xor.svg" style="width:60%; height:auto;"/>
 </div>
-<div>
+<div style="flex:1;">
 
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 0 |
+| 0 | 1 | | 1 |
+| 1 | 0 | | 1 |
+| 1 | 1 | | 0 |
 
 </div>
 </div>
@@ -166,44 +92,27 @@ B ----/
 
 # Porta XNOR (Coincidência)
 
-<v-clicks>
-
 - A porta XNOR é o complemento da porta XOR
 - Produz saída alta quando as entradas são iguais
 - **Equação:** Y = $\overline{A \oplus B}$ = A·B + $\overline{A}$·$\overline{B}$
 
-</v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
-<div class="flex justify-center mt-8">
-
-## Símbolo e Tabela Verdade
-
-<div grid="~ cols-2 gap-8">
-<div>
-
-```
-A ----\
-       =o---- Y = A̅ ⊕ B̅
-B ----/
-```
-
+<img src="images/xnor.svg" style="width:60%; height:auto;"/>
 </div>
-<div>
+<div style="flex:1;">
 
-| A | B | Y |
-|---|---|---|
-| 0 | 0 | 1 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
+| A | B | | Y |
+|---|---|-|---|
+| 0 | 0 | | 1 |
+| 0 | 1 | | 0 |
+| 1 | 0 | | 0 |
+| 1 | 1 | | 1 |
 
 </div>
 </div>
 
-</div>
-
----
-layout: section
 ---
 
 # Projeto e Análise de Circuitos Simples

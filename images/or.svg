@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="684.35596"
+   height="150.04836"
+   id="svg11"
+   sodipodi:docname="or.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.2121212"
+     inkscape:cx="135.16438"
+     inkscape:cy="29.383562"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g11" />
+  <defs
+     id="defs1" />
+  <g
+     id="g11"
+     transform="translate(-63.08001,-36.47582)">
+    <g
+       transform="matrix(2.5423729,0,0,2.625,-529.49628,-266.5)"
+       id="g10"
+       style="stroke-width:0.387093">
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d="m 336,160 h 12"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="1.16128"
+         stroke-dasharray="none"
+         id="path1" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d="m 336,128 h 12"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="1.16128"
+         stroke-dasharray="none"
+         id="path2" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d="m 404,144 h 12"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="1.16128"
+         stroke-dasharray="none"
+         id="path3" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 345,116 h 20 c 22,5 22,5 39,28 -17,23 -17,23 -39,28 h -20 c 7,-28 7,-28 0,-56 z"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="1.16128"
+         stroke-dasharray="none"
+         id="path4" />
+      <g
+         id="g5"
+         style="stroke-width:0.387093">
+        <g
+           id="g4"
+           style="stroke-width:0.387093">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="240"
+             y="128"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text4"
+             style="stroke-width:0.387093">A</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#807f7f"
+           paint-order="fill stroke markers"
+           d="M 336,128 H 252"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="1.16128"
+           stroke-dasharray="none"
+           id="path5" />
+      </g>
+      <g
+         id="g7"
+         style="stroke-width:0.387093">
+        <g
+           id="g6"
+           style="stroke-width:0.387093">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="240"
+             y="160"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text5"
+             style="stroke-width:0.387093">B</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#807f7f"
+           paint-order="fill stroke markers"
+           d="M 336,160 H 252"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="1.16128"
+           stroke-dasharray="none"
+           id="path6" />
+      </g>
+      <g
+         id="g9"
+         style="stroke-width:0.387093">
+        <g
+           id="g8"
+           style="stroke-width:0.387093">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="496"
+             y="144"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text7"
+             style="stroke-width:0.387093">Y</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#807f7f"
+           paint-order="fill stroke markers"
+           d="m 416,144 h 68"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="1.16128"
+           stroke-dasharray="none"
+           id="path8" />
+      </g>
+    </g>
+  </g>
+</svg>
