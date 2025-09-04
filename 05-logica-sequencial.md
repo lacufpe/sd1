@@ -1,5 +1,3 @@
----
-
 # Lógica Sequencial
 
 ### Prof. João Paulo Cerquinho Cajueiro
