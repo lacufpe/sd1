@@ -54,16 +54,12 @@ Dois estados possíveis: 0 ou 1 também chamados de **níveis lógicos**
 
 # Notação de Variáveis
 
-<v-clicks>
-
 - Usualmente, utilizamos letras maiúsculas para representar variáveis booleanas
 
 - **Exemplos:**
   - $A = 1$
   - $B = 0$  
   - $C = 0$
-
-</v-clicks>
 
 ---
 
@@ -257,8 +253,8 @@ As operações básicas na álgebra booleana são:
 <v-clicks>
 
 - Existem os valores 0 e 1 tais que:
-  - **A** + 0 = **A**
-  - **A** · 1 = **A**
+  - $A + 0 = A$
+  - $A · 1 = A$
 
 </v-clicks>
 
@@ -266,49 +262,77 @@ As operações básicas na álgebra booleana são:
 
 # Postulado 3 - Comutatividade
 
-<v-clicks>
-
-- **A** + **B** = **B** + **A**
-- **A** · **B** = **B** · **A**
-
-</v-clicks>
+- $A + B = B + A$
+- $A \cdot B = B \cdot A$
 
 ---
 
 # Postulado 4 - Associatividade
 
-<v-clicks>
+$A + (B + C) = (A + B) + C$
 
-- **A** + (**B** + **C**) = (**A** + **B**) + **C**
-- **A** · (**B** · **C**) = (**A** · **B**) · **C**
 
-</v-clicks>
+![images/VennPost3a.svg](images/VennPost3a.svg)
+
+---
+
+# Postulado 4 - Associatividade
+
+$A \cdot (B \cdot C) = (A \cdot B) \cdot C$
+
+![images/VennPost3b.svg](images/VennPost3b.svg)
 
 ---
 
 # Postulado 5 - Distributividade
 
-- **A** · (**B** + **C**) = (**A** · **B**) + (**A** · **C**)
-- **A** + (**B** · **C**) = (**A** + **B**) · (**A** + **C**)
+$A \cdot (B + C) = (A \cdot B) + (A \cdot C)$
+
+![images/VennPost5a.svg](images/VennPost5a.svg)
+
+---
+
+# Postulado 5 - Distributividade
+
+$A + (B \cdot C) = (A + B) \cdot (A + C)$
+
+![images/VennPost5b.svg](images/VennPost5b.svg)
+  
+</div>
 
 ---
 
 # Postulado 6 - Existência de Complemento
 
-<v-clicks>
+- Para todo $A \in K$, existe um e apenas um $\overline{A} \in K$, chamado de complemento de $A$, tal que:
+  <div style="display: flex; gap: 2em;">
 
-- Para todo **A** ∈ K, existe um e apenas um $\overline{A}$ ∈ K, chamado de complemento de **A**, tal que:
-  - **A** + $\overline{A}$ = 1
-  - **A** · $\overline{A}$ = 0
+  $A + \overline{A} = 1$
+  
+  $A · \overline{A} = 0$
 
-</v-clicks>
+</div>
+<div style="flex:1;text-align:center">
+
+![](images/VennPost6.svg)
+
+</div>
+</div>
 
 ---
 
 # Precedência de Operadores
 
-<div grid="~ cols-2 gap-4">
-<div>
+<div class="columns">
+<div class="column">
+
+1. Inversões simples
+2. Operações dentro dos parênteses
+3. Barras agem como parênteses
+4. `AND`
+5. `OR`
+</div>
+<div class="column">
 
 **Exemplo:**
 
@@ -317,23 +341,8 @@ Seja $x = \overline{ABC + (DA + CD)\overline{B}}$
 em que **A** = 1, **B** = 0, **C** = 0 e **D** = 1
 
 </div>
-<div>
-
-<v-clicks>
-
-**Algoritmo:**
-1. Realizar as inversões simples
-2. Realizar as operações dentro dos parênteses
-3. Realizar as operações `AND` antes das operações `OR` (obedecendo a precedência dos parênteses)
-4. Se uma expressão tiver uma barra sobre, primeiro realize a expressão e depois inverta o resultado
-
-</v-clicks>
-
-</div>
 </div>
 
----
-layout: section
 ---
 
 # Teoremas da Álgebra de Boole
@@ -342,130 +351,87 @@ layout: section
 
 # Teorema 1
 
-<v-clicks>
-
 - O `OR` ou o `AND` de um valor por ele mesmo é igual a ele mesmo
 
-$$\begin{align}
-a + a &= a \\
-a \cdot a &= a
-\end{align}$$
+$a + a = a $
 
-</v-clicks>
+$a \cdot a = a$
 
 ---
 
 # Teorema 2
 
-<v-clicks>
+$a + 1 = 1 $
 
-$$\begin{align}
-a + 1 &= 1 \\
-a \cdot 0 &= 0
-\end{align}$$
+$a \cdot 0 = 0 $
 
-</v-clicks>
 
 ---
 
 # Teorema 3
 
-<v-clicks>
+O complemento do complemento de $a$ é $a$
 
-$$\overline{\overline{a}} = a$$
+$\overline{\overline{a}} = a$
 
-</v-clicks>
 
 ---
 
 # Teorema 4
 
-<v-clicks>
 
-$$\begin{align}
-a + a \cdot b &= a \\
-a \cdot (a + b) &= a
-\end{align}$$
+$
+a + a \cdot b = a $
 
-</v-clicks>
+$a \cdot (a + b) = a$
 
 ---
 
 # Teorema 5
 
-<v-clicks>
+$a + \overline{a} \cdot b = a + b $
 
-$$\begin{align}
-a + \overline{a} \cdot b &= a + b \\
-a \cdot (\overline{a} + b) &= a \cdot b
-\end{align}$$
-
-</v-clicks>
+$a \cdot (\overline{a} + b) = a \cdot b$
 
 ---
 
 # Teorema 6
 
-<v-clicks>
+$a \cdot b + a \cdot \overline{b} = a $
 
-$$\begin{align}
-a \cdot b + a \cdot \overline{b} &= a \\
-(a + b) \cdot (a + \overline{b}) &= a
-\end{align}$$
-
-</v-clicks>
+$(a + b) \cdot (a + \overline{b}) = a$
 
 ---
 
 # Teorema 7
 
-<v-clicks>
+$a \cdot b + a \cdot \overline{b} \cdot c = a \cdot b + a \cdot c $
 
-$$\begin{align}
-a \cdot b + a \cdot \overline{b} \cdot c &= a \cdot b + a \cdot c \\
-(a + b) \cdot (a + \overline{b} + c) &= (a + b) \cdot (a + c)
-\end{align}$$
-
-</v-clicks>
+$(a + b) \cdot (a + \overline{b} + c) = (a + b) \cdot (a + c)$
 
 ---
 
 # Teorema 8 - Leis de DeMorgan
 
-<v-clicks>
+$\overline{a + b} = \overline{a} \cdot \overline{b} $
 
-$$\begin{align}
-\overline{a + b} &= \overline{a} \cdot \overline{b} \\
-\overline{a \cdot b} &= \overline{a} + \overline{b}
-\end{align}$$
-
-</v-clicks>
+$\overline{a \cdot b} = \overline{a} + \overline{b}$
 
 ---
 
 # Teorema 9 - Teorema do Consenso
 
-<v-clicks>
+$a \cdot b + \overline{a} \cdot c + b \cdot c = a \cdot b + \overline{a} \cdot c$
 
-$$\begin{align}
-a \cdot b + \overline{a} \cdot c + b \cdot c &= a \cdot b + \overline{a} \cdot c \\
-(a + b) \cdot (\overline{a} + c) \cdot (b + c) &= (a + b) \cdot (\overline{a} + c)
-\end{align}$$
-
-</v-clicks>
+$(a + b) \cdot (\overline{a} + c) \cdot (b + c) = (a + b) \cdot (\overline{a} + c)$
 
 ---
 
 # Teorema 10 - Expansão de Shannon
 
-<v-clicks>
+$f(x_1,x_2, \cdots, x_n) = x_1 \cdot f(1,x_2,\cdots,x_n) + \overline{x_1} \cdot f(0,x_2,\cdots, x_n) $
 
-$$\begin{align}
-f(x_1,x_2, \cdots, x_n) &= x_1 \cdot f(1,x_2,\cdots,x_n) + \overline{x_1} \cdot f(0,x_2,\cdots, x_n) \\
-f(x_1,x_2, \cdots, x_n) &= (x_1 + f(0,x_2,\cdots,x_n)) \cdot (\overline{x_1} + f(1,x_2,\cdots, x_n))
-\end{align}$$
-
-</v-clicks>
+$f(x_1,x_2, \cdots, x_n) = (x_1 + f(0,x_2,\cdots,x_n)) \cdot (\overline{x_1} + f(1,x_2,\cdots, x_n))$
 
 ---
 
@@ -487,24 +453,9 @@ f(x_1,x_2, \cdots, x_n) &= (x_1 + f(0,x_2,\cdots,x_n)) \cdot (\overline{x_1} + f
 </div>
 
 ---
-layout: section
----
-
-# Bibliografia
-
----
 
 # Bibliografia
 
 - RANHEL, João. **"Eletrônica Digital, Verilog e FPGA"**, 1ª ed., Clube do Autor, 2021.
 
 - CAJUEIRO, J. P. C., **Álgebra de Boole**, Notas de Aula, 19 de agosto de 2009.
-
----
-layout: end
----
-
-# Obrigado!
-
-**Perguntas?**
-

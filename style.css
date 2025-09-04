@@ -1,0 +1,28 @@
+.columns{
+    display: flex;
+    gap:2em;
+}
+.column{
+    flex:1;
+    text-align: center;
+}
+
+.reveal h1 {
+  top: 5% !important; /* Ajuste a porcentagem conforme sua necessidade */
+  font-size: 2.5em; /* Valor padrão é 3.77em, ajuste para um valor menor */
+
+}
+
+.reveal h2 {
+  top: 10% !important; /* Ajuste a porcentagem conforme sua necessidade */
+  font-size: 1.5em; /* Valor padrão é 3.77em, ajuste para um valor menor */  
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-shadow: none;
+}

@@ -121,25 +121,15 @@ Departamento de Engenharia Mecânica
 
 # Circuitos Digitais
 
-<v-clicks>
+- Podem ser com relés eletromagnéticos, válvulas eletrônicas, diodos, transistores, associação desses componentes, ou circuitos integrados discretos
 
-- Circuitos digitais podem ser feitos com relés eletromagnéticos, válvulas eletrônicas, diodos, transistores, associação desses componentes, ou circuitos integrados discretos
-
-- Dessa forma, vamos usar a abstração **"porta lógica"** para estudar as propriedades dos circuitos digitais sem nos preocuparmos com o que há dentro das portas por enquanto
-
-</v-clicks>
+- **"Porta lógica"** abstrai a implementação para estudar as propriedades dos circuitos digitais
 
 ---
 
 # Associação de Portas
 
-<v-clicks>
-
-- Considerando o que foi explanado, é possível inferir corretamente que é possível associar portas
-
-- Ou seja, a saída de uma porta pode servir como entrada de outra, criando combinações de funções lógicas
-
-</v-clicks>
+É possível associar portas com a saída de uma sendo entrada de outra, criando combinações de funções lógicas
 
 <div class="flex justify-center mt-4">
 
@@ -157,114 +147,61 @@ C -------------|--
 
 ---
 
-# Análise de Circuitos
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-<v-clicks>
-
-- Para fazer a análise de um circuito parte-se de:
-  - Um esquema do circuito
-  - Um conjunto de equações
-  - Um texto explicando o comportamento do circuito
-
-</v-clicks>
-
-</div>
-<div>
-
-<div class="flex justify-center">
-
-```
-A ----\
-       &----\
-B ----/      \
-              >---- Y
-C -----------/
-```
-
-**Y = (A·B) + C**
-
-</div>
-
-</div>
-</div>
-
----
-
-# Projeto Simples com Componentes Discretos
-
-<v-clicks>
-
-- Vamos elaborar a síntese de um projeto simples para entender o passo a passo como transformamos uma necessidade descrita em linguagem natural para um circuito eletrônico
-
-</v-clicks>
-
----
-
 # Exemplo de Projeto - Controle de Forno
-
-<v-clicks>
 
 **Especificação:**
 
 *"Devemos controlar um forno que deve desligar as resistências sempre que a porta for aberta, deve ligar a resistência quando um sensor (termostato) indicar temperatura baixa, e desligar a resistência quando o sensor indicar que o forno está sobreaquecido"*
 
-</v-clicks>
-
 ---
 
 # Etapa 1 - Traduzir as Variáveis
 
-<v-clicks>
-
 **Para resolver o projeto:**
 
-1. **Porta** (P): aberta P=0; fechada P=1
-2. **Termostato** (T): temperatura baixa T=0; sobreaquecimento T=1  
-3. **Saída do sistema: resistência** (R): resistência ligada R=1; resistência desligada R=0
-
-</v-clicks>
+1. **Entrada: Porta** ($P$): aberta $P=0$; fechada $P=1$
+2. **Entrada: Termostato** ($T$): temperatura baixa $T=0$; sobreaquecimento $T=1$  
+3. **Saída do sistema: resistência** ($R$): resistência ligada $R=1$; resistência desligada $R=0$
 
 ---
 
 # Etapa 2 - Gerar a Tabela Verdade
 
-<div class="flex justify-center">
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
-| **Porta** | **Termostato** | **Resistência** |
-|-----------|----------------|-----------------|
-| P         | T              | R               |
-| 0         | 0              | 0               |
-| 0         | 1              | 0               |
-| 1         | 0              | 1               |
-| 1         | 1              | 0               |
+| **Porta** | **Termostato** | | **Resistência** |
+|-----------|----------------|-|-----------------|
+| P         | T              | | R               |
+| 0         | 0              | | 0               |
+| 0         | 1              | | 0               |
+| 1         | 0              | | 1               |
+| 1         | 1              | | 0               |
 
 </div>
-
-<v-clicks>
+<div style="flex:1;">
 
 **Análise:**
 - Se porta aberta (P=0) → resistência sempre desligada
 - Se porta fechada (P=1) e temperatura baixa (T=0) → resistência ligada
 - Se porta fechada (P=1) e sobreaquecimento (T=1) → resistência desligada
 
-</v-clicks>
+</div>
+</div>
 
 ---
 
 # Etapa 3 - Extrair a Equação Booleana
 
-<v-clicks>
+<div style="display: flex; gap: 2em;">
+<div style="flex:1;">
 
 Da tabela verdade, temos R=1 apenas quando P=1 e T=0:
 
 **R = P · $\overline{T}$**
 
-</v-clicks>
-
-<div class="flex justify-center mt-8">
+</div>
+<div style="flex:1">
 
 ```
 P ----\
@@ -273,29 +210,24 @@ T̅ ----/
 ```
 
 </div>
+</div>
 
 ---
 
 # Exemplo 2 - Sala com 3 Interruptores
 
-<div grid="~ cols-2 gap-4">
-<div>
-
-<v-clicks>
+<div class="columns">
+<div class="column">
 
 **Especificação:**
 - Uma sala com 3 portas com interruptores em cada uma delas e uma lâmpada ao centro
 - Quando uma pessoa entrar por uma porta ela liga ou desliga o interruptor da porta
 - A lâmpada deve acender ou apagar cada vez que um interruptor mudar de estado
 
-</v-clicks>
-
 </div>
-<div>
+<div class="column">
 
-<div class="flex justify-center">
 <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Sala+com+3+Interruptores" alt="Sala com 3 interruptores">
-</div>
 
 </div>
 </div>
@@ -304,17 +236,16 @@ T̅ ----/
 
 # Definindo as Convenções
 
-<v-clicks>
-
 **Variáveis:**
 - **A, B, C:** Estados dos interruptores (0 = desligado, 1 = ligado)
 - **LAMPADA:** Estado da lâmpada (0 = apagada, 1 = acesa)
 
+<div class="fragment">
+
 **Lógica:**
 - A lâmpada deve estar acesa quando um número ímpar de interruptores estiver ligado
 - A lâmpada deve estar apagada quando um número par de interruptores estiver ligado
-
-</v-clicks>
+</div>
 
 ---
 
@@ -322,16 +253,17 @@ T̅ ----/
 
 <div class="flex justify-center">
 
-| A | B | C | LAMPADA |
-|---|---|---|---------|
-| 0 | 0 | 0 | 0       |
-| 0 | 0 | 1 | 1       |
-| 0 | 1 | 0 | 1       |
-| 0 | 1 | 1 | 0       |
-| 1 | 0 | 0 | 1       |
-| 1 | 0 | 1 | 0       |
-| 1 | 1 | 0 | 0       |
-| 1 | 1 | 1 | 1       |
+| A | B | C | | LAMPADA |
+|---|---|---|-|---------|
+| 0 | 0 | 0 | | 0       |
+| 0 | 0 | 1 | | 1       |
+| 0 | 1 | 0 | | 1       |
+| 0 | 1 | 1 | | 0       |
+| 1 | 0 | 0 | | 1       |
+| 1 | 0 | 1 | | 0       |
+| 1 | 1 | 0 | | 0       |
+| 1 | 1 | 1 | | 1       |
+| 1 | 1 | 1 | | 1       |
 
 </div>
 
@@ -339,23 +271,21 @@ T̅ ----/
 
 # Extraindo a Equação Booleana
 
-<v-clicks>
 
 Da tabela verdade, extraímos a equação para LAMPADA=1:
 
-**LAMPADA = $\overline{A}$·$\overline{B}$·C + $\overline{A}$·B·$\overline{C}$ + A·$\overline{B}$·$\overline{C}$ + A·B·C**
+$LAMPADA = \overline{A}·\overline{B}·C + \overline{A}·B·\overline{C} + A·\overline{B}·\overline{C} + A·B·C$
 
 Esta é a função XOR de três variáveis:
 
-**LAMPADA = A ⊕ B ⊕ C**
-
-</v-clicks>
+$ LAMPADA = A ⊕ B ⊕ C$
 
 ---
 
-# Implementação no Logisim
+# Implementação no Digital
 
-<div class="flex justify-center">
+<div class="columns">
+<div class="column">
 
 ```
 A ----\
@@ -364,26 +294,19 @@ B ----/        \
                 =1---- LAMPADA
 C -------------/
 ```
-
-**Circuito usando portas XOR**
-
 </div>
+<div class="column">
 
-<v-clicks>
-
-**Vantagens do Logisim:**
 - Simulação em tempo real
 - Interface gráfica intuitiva
 - Verificação de funcionamento
 - Geração de circuitos otimizados
 
-</v-clicks>
+</div>
 
 ---
 
-# Recursos do Logisim
-
-<v-clicks>
+# Recursos do Digital
 
 **Principais funcionalidades:**
 - Biblioteca completa de portas lógicas
@@ -393,17 +316,7 @@ C -------------/
 - Simulação passo a passo
 - Exportação de circuitos
 
-**Links úteis:**
-- Tutorial: http://www.cburch.com/logisim/docs/2.7/pt/html/guide/index.html
-- Download: https://github.com/logisim-evolution/logisim-evolution/releases
-
-</v-clicks>
-
----
-layout: section
----
-
-# Bibliografia
+- https://github.com/hneemann/Digital/releases/latest
 
 ---
 
@@ -413,15 +326,4 @@ layout: section
 
 - CAJUEIRO, J. P. C., **Álgebra de Boole**, Notas de Aula, 19 de agosto de 2009.
 
-- Tutorial Logisim: http://www.cburch.com/logisim/docs/2.7/pt/html/guide/index.html
-
-- Link para download do Logisim: https://github.com/logisim-evolution/logisim-evolution/releases
-
----
-layout: end
----
-
-# Obrigado!
-
-**Perguntas?**
-
+- Link para download do Digital: https://github.com/hneemann/Digital/releases/latest
