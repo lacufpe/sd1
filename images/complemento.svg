@@ -1,0 +1,98 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <circle cx="300" cy="300" r="280" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Círculos das voltas -->
+  <circle cx="300" cy="300" r="220" fill="none" stroke="#6c757d" stroke-width="2"/>
+  <circle cx="300" cy="300" r="160" fill="none" stroke="#6c757d" stroke-width="2"/>
+  <circle cx="300" cy="300" r="100" fill="none" stroke="#6c757d" stroke-width="2"/>
+  
+  <!-- Linhas radiais -->
+  <g stroke="#dee2e6" stroke-width="1">
+    <!-- 16 linhas radiais (22.5 graus cada) -->
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(0 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(22.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(45 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(67.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(90 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(112.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(135 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(157.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(180 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(202.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(225 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(247.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(270 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(292.5 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(315 300 300)"/>
+    <line x1="300" y1="20" x2="300" y2="200" transform="rotate(337.5 300 300)"/>
+  </g>
+
+  <g stroke="#6c65ad" stroke-width="3">
+    <!-- 16 linhas radiais (22.5 graus cada) -->
+    <line x1="300" y1="80" x2="300" y2="200" transform="rotate(0 300 300)"/>
+    <line x1="300" y1="140" x2="300" y2="200" transform="rotate(180 300 300)"/>
+  </g>
+
+  <!-- Volta externa - Números binários (0000 a 1111) -->
+  <g font-family="monospace" font-size="20" font-weight="bold" fill="#dc3545" text-anchor="middle">
+    <text x="300" y="60" transform="rotate(11.25 300 300)">0000</text>
+    <text x="300" y="60" transform="rotate(33.75 300 300)">0001</text>
+    <text x="300" y="60" transform="rotate(56.25 300 300)">0010</text>
+    <text x="300" y="60" transform="rotate(78.75 300 300)">0011</text>
+    <text x="300" y="60" transform="rotate(101.25 300 300)">0100</text>
+    <text x="300" y="60" transform="rotate(123.75 300 300)">0101</text>
+    <text x="300" y="60" transform="rotate(146.25 300 300)">0110</text>
+    <text x="300" y="60" transform="rotate(168.75 300 300)">0111</text>
+    <text x="300" y="60" transform="rotate(191.25 300 300)">1000</text>
+    <text x="300" y="60" transform="rotate(213.75 300 300)">1001</text>
+    <text x="300" y="60" transform="rotate(236.25 300 300)">1010</text>
+    <text x="300" y="60" transform="rotate(258.75 300 300)">1011</text>
+    <text x="300" y="60" transform="rotate(281.25 300 300)">1100</text>
+    <text x="300" y="60" transform="rotate(303.75 300 300)">1101</text>
+    <text x="300" y="60" transform="rotate(326.25 300 300)">1110</text>
+    <text x="300" y="60" transform="rotate(348.75 300 300)">1111</text>
+  </g>
+  
+  <!-- Segunda volta - Números decimais (0 a 15) -->
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0d6efd" text-anchor="middle">
+    <text x="300" y="120" transform="rotate(11.25  300 300)">0</text>
+    <text x="300" y="120" transform="rotate(33.75  300 300)">1</text>
+    <text x="300" y="120" transform="rotate(56.25  300 300)">2</text>
+    <text x="300" y="120" transform="rotate(78.75  300 300)">3</text>
+    <text x="300" y="120" transform="rotate(101.25 300 300)">4</text>
+    <text x="300" y="120" transform="rotate(123.75 300 300)">5</text>
+    <text x="300" y="120" transform="rotate(146.25 300 300)">6</text>
+    <text x="300" y="120" transform="rotate(168.75 300 300)">7</text>
+    <text x="300" y="120" transform="rotate(191.25 300 300)">8</text>
+    <text x="300" y="120" transform="rotate(213.75 300 300)">9</text>
+    <text x="300" y="120" transform="rotate(236.25 300 300)">10</text>
+    <text x="300" y="120" transform="rotate(258.75 300 300)">11</text>
+    <text x="300" y="120" transform="rotate(281.25 300 300)">12</text>
+    <text x="300" y="120" transform="rotate(303.75 300 300)">13</text>
+    <text x="300" y="120" transform="rotate(326.25 300 300)">14</text>
+    <text x="300" y="120" transform="rotate(348.75 300 300)">15</text>
+  </g>
+  
+  <!-- Volta interna - Complemento a 2 (0 a 7, -8 a -1) -->
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#198754" text-anchor="middle">
+    <text x="300" y="180" transform="rotate(11.25  300 300)">0</text>
+    <text x="300" y="180" transform="rotate(33.75  300 300)">1</text>
+    <text x="300" y="180" transform="rotate(56.25  300 300)">2</text>
+    <text x="300" y="180" transform="rotate(78.75  300 300)">3</text>
+    <text x="300" y="180" transform="rotate(101.25 300 300)">4</text>
+    <text x="300" y="180" transform="rotate(123.75 300 300)">5</text>
+    <text x="300" y="180" transform="rotate(146.25 300 300)">6</text>
+    <text x="300" y="180" transform="rotate(168.75 300 300)">7</text>
+    <text x="300" y="180" transform="rotate(191.25 300 300)">-8</text>
+    <text x="300" y="180" transform="rotate(213.75 300 300)">-7</text>
+    <text x="300" y="180" transform="rotate(236.25 300 300)">-6</text>
+    <text x="300" y="180" transform="rotate(258.75 300 300)">-5</text>
+    <text x="300" y="180" transform="rotate(281.25 300 300)">-4</text>
+    <text x="300" y="180" transform="rotate(303.75 300 300)">-3</text>
+    <text x="300" y="180" transform="rotate(326.25 300 300)">-2</text>
+    <text x="300" y="180" transform="rotate(348.75 300 300)">-1</text>
+  </g>
+  
+
+</svg>

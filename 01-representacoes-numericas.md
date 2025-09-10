@@ -130,6 +130,10 @@ $$M = 2^4 = 16$$
 
 ---
 
+![Conjuntos numéricos](images/conjuntos-numericos.webp)
+
+---
+
 ## Números Naturais x Inteiros
 
 ### Sinal-Magnitude
@@ -166,3 +170,5 @@ $$Y = 2^n - X$$
         3.  **Soma-se 1:** $11111101$.
 
 ---
+
+<img src="images/complemento.svg" alt="My image" style="width:50%; height:auto;">
