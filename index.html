@@ -9,18 +9,22 @@
             margin: 0;
         }
         header {
-            background-color: #2c3e50;
-            color: #fff;
+            background-color: #F0E2A3;
+            color: #664E4C;
             padding: 20px 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
         }
         nav {
-            background-color: #ecf0f1;
+            background-color: #C1D37F;
             padding: 15px 0;
             text-align: center;
         }
         nav a {
-            color: #2c3e50;
+            color: #664E4C;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -31,49 +35,59 @@
         main {
             padding: 30px;
             text-align: center;
+            background-color: #E2D58B;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px 15px;
+            justify-items: center;
+            margin-bottom: 20px;
+        }
+        .links-grid a, .links-grid span {
+            display: block;
+            padding: 6px 8px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-            <img src="images/logoufpe.jpg" alt="Logo UFPE" style="height: 80px;">
-            <div>
+        <img src="images/LogoLAC.png" alt="Logo UFPE" style="height: 100px;">
+        <div>
             <h1>Eng. Mecânica UFPE - Sistemas Digitais 1</h1>
             <h2>Prof. João Paulo Cerquinho Cajueiro</h2>
-            </div>
         </div>
     </header>
     <nav>
         <h2>Aulas</h2>
+        <div class="links-grid">
         <a href="aula01.html">01 - Representações numéricas</a>
         <a href="aula02.html">02 - Aritmética binária</a>
         <a href="aula03.html">03 - Lógica booleana</a>
         <a href="aula04.html">04 - Circuitos combinacionais</a>
         <a href="aula05.html">05 - Circuitos Sequenciais</a>
         <a href="aula06.html">06 - Máquina de Estados Finita</a>
-        07 - Sistemas Microcontrolados (em breve)
-        08 - Circuitos combinacionais (em breve)
-        09 - Conversores A/D e D/A 1 (em breve)
-        10 - Comunicacão Serial (em breve)
-        11 - Conversores A/D e D/A 2 (em breve)
-        <!-- <a href="aula07.html">07 - Sistemas Microcontrolados</a>
-        <a href="aula08.html">08 - Circuitos combinacionais</a>
-        <a href="aula08b.html">08b - Revisão de C</a>
-        <a href="aula09.html">09 - </a>
-        <a href="aula10.html">10 - </a>
-        <a href="aula11.html">11 - </a> -->
+        <span>07 - Sistemas Microcontrolados (em breve)</span>
+        <span>08 - Circuitos combinacionais (em breve)</span>
+        <span>09 - Conversores A/D e D/A 1 (em breve)</span>
+        <span>10 - Comunicacão Serial (em breve)</span>
+        <span>11 - Conversores A/D e D/A 2 (em breve)</span>
+        </div>
         
         <h2>Listas</h2>
-        Lista 01 (em breve)
-        Lista 02 (em breve)
-        Lista 03 (em breve)
-        Lista 04 (em breve)
-        Lista 05 (em breve)
+        <div class="links-grid">
+        <span>Lista 01 (em breve)</span>
+        <span>Lista 02 (em breve)</span>
+        <span>Lista 03 (em breve)</span>
+        <span>Lista 04 (em breve)</span>
+        <span>Lista 05 (em breve)</span>
+        </div>
 
         <h2>Projetos (em breve)</h2>
-        Projeto 01 (em breve)
-        Projeto 02 (em breve)
+        <div class="links-grid">
+        <span>Projeto 01 (em breve)</span>
+        <span>Projeto 02 (em breve)</span>
+        </div>
     </nav>
     <main>
         <p>Bem-vindo ao site da disciplina!</p>
