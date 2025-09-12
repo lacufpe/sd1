@@ -1,5 +1,3 @@
----
-
 # Introdução aos Sistemas Microcontrolados
 ### Prof. João Paulo Cerquinho Cajueiro
 #### Baseado em slides de Prof. José Rodrigues de Oliveira Neto
