@@ -92,7 +92,7 @@ Departamento de Engenharia Mecânica
 
 ---
 
-### Preço do processamento:
+<!-- ### Preço do processamento: -->
 
 <!-- ![historiaProcessador](images/muctrl/historiaProcessador.png) -->
 <div id="computer-chart-1" class="computer-evolution-chart"></div>
@@ -263,14 +263,24 @@ Os microcontroladores são formados por:
 
 ### Unidade Lógica Aritmética (ULA)
 
-* **Primeiro desenvolvimento:** 1946 Von Neumann - Princeton - Institute for Advanced Study - IAS. 
+Desenvolvido em 1946 por Von Neumann - Princeton - Institute for Advanced Study - IAS. 
+
+<div class="columns">
+<div class="column">
+
 * **Sistema Numérico:** Complemento a dois.
 * **Realiza Operações simples:**
     * Aritméticas ( $+$, $-$ , $<$, $>$ , $\leq$, $\geq$, $=$ , $\neq$ ).
     * Lógicas (**OR**, **AND**, **NOT**).
     * Deslocamento (*shift, rotate*).
 
+</div>
+<div class="column">
+
 ![ULA](images/muctrl/ULA.png)
+
+</div>
+</div>
 
 ---
 
@@ -288,26 +298,32 @@ Os microcontroladores são formados por:
     * Processamento dos dados.
     * Armazenamento dos dados.
 
-![SistemaEmbarcado02](images/muctrl/SistemaEmbarcado2.png)
+![SistemaEmbarcado02](images/muctrl/SistemaEmbarcado02.png)
 <small>Fonte - (GARCIA, 2018).</small>
 
 ---
 
 ## Arduino
 
+<div class="columns">
+<div class="column">
+
 * Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre. 
 * O projeto Arduino começou em 2005 como um programa para estudantes do **Instituto de Design de Interação Ivrea**, em Ivrea, Itália, com o objetivo de fornecer uma maneira fácil e de baixo custo para iniciantes e profissionais criarem dispositivos que interagem com seu ambiente usando sensores e atuadores.
 
+</div>
+<div class="column">
+
 ![Arduino-uno](images/muctrl/Arduino-uno.png)
+
 <small>Fonte - https://pt.wikipedia.org/wiki/Arduino</small>
+
+</div>
+</div>
 
 ---
 
-* As placas do Arduino estão disponíveis comercialmente em forma pré-montada ou como esquemáticos para você fazer por você mesmo.
-* Os projetos das placas Arduino usam uma variedade de microprocessadores e controladores. 
-* As placas estão equipadas com conjuntos de pinos de entrada/saída digital e analógica que podem ser conectados a várias placas de expansão (*shields*) e outros circuitos.
-
-![Arduino-uno](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Arduino_Uno_-_R3.jpg/220px-Arduino_Uno_-_R3.jpg)
+![Arduino-uno](./images/muctrl/arduino-uno-r3.jpg)
 
 
 ---
