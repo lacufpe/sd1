@@ -280,7 +280,9 @@ c) $01100001 - 00011001$
 </div>
 
 <div class="fragment">
+
 **Verificação:** $11 \times 5 = 55$ ✓
+
 </div>
 
 ---

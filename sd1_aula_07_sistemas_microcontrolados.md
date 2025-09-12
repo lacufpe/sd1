@@ -1,13 +1,11 @@
 ---
-marp: true
-theme: gaia
-_class: lead
-paginate: true
-backgroundColor: #fff
-backgroundImage: url("https://marp.app/assets/hero-background.svg")
----
 
 # Introdução aos Sistemas Microcontrolados
+### Prof. João Paulo Cerquinho Cajueiro
+#### Baseado em slides de Prof. José Rodrigues de Oliveira Neto
+
+Universidade Federal de Pernambuco  
+Departamento de Engenharia Mecânica
 
 ---
 
@@ -15,15 +13,14 @@ backgroundImage: url("https://marp.app/assets/hero-background.svg")
 
 ### O que é um sistema embarcado
 
-* Antes de Definirmos o que é um sistema microcontrolado, é interessante definirmos o que é um sistema embarcado: 
-    * Sistema eletrônico para um propósito específico.
-    * Seu projeto mistura Hardware (Eletrônica) + Software (Computação) + Mecânica (Limitações físicas/Interface com o mundo).
-    * Parte de um sistema maior.
-    * Se diferencia dos computadores de uso geral.
+* Sistema eletrônico para um propósito específico.
+* Hardware (Eletrônica) + Software (Computação) + Mecânica (Limitações físicas/Interface com o mundo).
+* Parte de um sistema maior.
+* Se diferencia dos computadores de uso geral.
 
 ---
 
-* Uma classe específica de sistema computadorizado. 
+## Uma classe específica de sistema computadorizado. 
 
 ---
 
@@ -40,6 +37,9 @@ backgroundImage: url("https://marp.app/assets/hero-background.svg")
 
 * Cada Sistema Embarcado possui um hardware único ou a customização de um hardware padrão.
 
+<div class="columns">
+<div class="column">
+
   * Esse hardware pode variar quanto ao uso de:
     * **Arquiteturas do processador;**
     * **Memórias;**
@@ -49,19 +49,25 @@ backgroundImage: url("https://marp.app/assets/hero-background.svg")
     * **Periféricos Conversores;**
     * **Alimentação;** 
     * **Coprocessadores.**
+</div>
+<div class="column">
 
-  ![SistemaEmporcado01](FIGURAS/SistemaEmbarcado01.png)
+  ![SistemaEmporcado01](images/muctrl/SistemaEmbarcado01.png)
+
   <small>Fonte - (GARCIA, 2018).</small>
+
+</div>
+</div>
 
 ---
 
 ### Restrições
 
-* **Restrições de Custo:** custo do projeto + fabricação + logística + assistência, concorrência (para produtos de larga escala), ou pouca demanda.
-* **Restrições Dimensionais:** produtos portáteis, parte de sistemas maiores.
-* **Restrições de Consumo e Autonomia:** aparelhos portáteis, sensoriamento em lugares remotos, etc. 
-* **Restrições de Recursos Computacionais:** baixo processamento, pouca memória, número limitado de sensores e/ou atuadores.
-* **Restrições Temporais:** Real-Time Systems.   
+* **Financeiras:** custo do projeto + fabricação + logística + assistência, concorrência (para produtos de larga escala), ou pouca demanda.
+* **Dimensionais:** produtos portáteis, parte de sistemas maiores.
+* **de Consumo e Autonomia:** aparelhos portáteis, sensoriamento em lugares remotos, etc. 
+* **de Recursos Computacionais:** baixo processamento, pouca memória, número limitado de sensores e/ou atuadores.
+* **Temporais:** Real-Time Systems.   
 
 ---
 
@@ -76,50 +82,58 @@ backgroundImage: url("https://marp.app/assets/hero-background.svg")
 
 ## Organização de Computadores
 
+---
+
 ### As partes que integram um sistema microprocessado
 
-![organizacao](FIGURAS/organizacao.png)
+![organizacao](images/muctrl/organizacao.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Preço do processamento:
 
-![historiaProcessador](FIGURAS/historiaProcessador.png)
+<!-- ![historiaProcessador](images/muctrl/historiaProcessador.png) -->
+<div id="computer-chart-1" class="computer-evolution-chart"></div>
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Evolução da Tecnologia das Portas Lógicas:
 
-![tecnologiaComputador](FIGURAS/tecnologiaComputador.png)
+![tecnologiaComputador](images/muctrl/tecnologiaComputador.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Válvulas - *Vacuum tube*
 
-![vaccum](FIGURAS/vaccum.jpg)
+![vaccum](images/muctrl/vaccum.jpg)
 
 ---
 
-### Diagrama em blocos do processo de produção de um CI:
+### Produção de um CI:
 
-![producaoCI](FIGURAS/producaoCI.png)
+![producaoCI](images/muctrl/producaoCI.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Método Chokhralsky de Produção de Silício:
 
-![chmetodo](FIGURAS/chmetodo.png)
+![chmetodo](images/muctrl/chmetodo.png)
+
 <small>Fonte - https://medium.com/@solar.dao/silicon-ingots-and-wafers-production-c75da33337a5.</small>
 
 ---
 
 ### Método Chokhralsky de Produção de Silício:
 
-![monocristalino](FIGURAS/monocristalino.png)
+![monocristalino](images/muctrl/monocristalino.png)
 
 <small>Fonte - https://medium.com/@solar.dao/silicon-ingots-and-wafers-production-c75da33337a5.</small>
 
@@ -127,92 +141,123 @@ backgroundImage: url("https://marp.app/assets/hero-background.svg")
 
 ### Diagrama em blocos do processo de produção de um CI:
 
-![producaoCI](FIGURAS/producaoCI.png)
+![producaoCI](images/muctrl/producaoCI.png)
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Chips em um *wafer*:
 
-![dicoCI](FIGURAS/dicoCI.png)
+![dicoCI](images/muctrl/dicoCI.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
-### Diagrama em blocos do processo de produção de um CI:
+### Produção de um CI:
 
-![producaoCI](FIGURAS/producaoCI.png)
+![producaoCI](images/muctrl/producaoCI.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Apple A5
 
-![appleA5](FIGURAS/appleA5.png)
+![appleA5](images/muctrl/appleA5.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Abstração entre Hardware e Software:
 
-![abstracao](FIGURAS/abstracao.png)
+![abstracao](images/muctrl/abstracao.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Da linguagem de programação de Alto-nível de abstração para linguagem de máquina:
 
-![c](FIGURAS/c.png)
+![c](images/muctrl/c.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Da linguagem de programação de Alto-nível de abstração para linguagem de máquina:
 
-![assembly](FIGURAS/assembly.png)
+![assembly](images/muctrl/assembly.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ### Da linguagem de programação de Alto-nível de abstração para linguagem de máquina:
 
-![binario](FIGURAS/binario.png)
+![binario](images/muctrl/binario.png)
+
 <small>Fonte - (PATTERSON, 2017).</small>
 
 ---
 
 ## Microcontroladores
+<div class="columns">
+<div class="column">
 
-### Microcontroladores
-
-Os microcontroladores são formados por:
+Formados por:
 * Núcleo de processamento.
 * Memórias.
 * Periféricos.
 
-![SistemaEmbarcado05](FIGURAS/SistemaEmbarcado05.png)
+</div>
+<div class="column">
+
+![SistemaEmbarcado05](images/muctrl/SistemaEmbarcado05.png)
+
 <small>Fonte - (GARCIA, 2018).</small>
+
+</div>
+</div>
 
 ---
 
+<div class="columns">
+<div class="column">
+
 Os microcontroladores são formados por:
 * Núcleo de processamento.
 * Memórias.
 * Periféricos.
 
-![SistemaEmbarcado01](FIGURAS/SistemaEmbarcado01.png)
+
+![SistemaEmbarcado01](images/muctrl/SistemaEmbarcado01.png)
+
 <small>Fonte - (GARCIA, 2018).</small>
+
+</div>
+</div>
 
 ---
 
 ### Núcleo de Processamento (CPU)
+
+<div class="columns">
+<div class="column">
+
+![cpu](images/muctrl/cpu.png)
+
+</div>
+<div class="column">
 
 * Unidade Lógica Aritmética.
 * Unidade de Controle.
 * Registradores.
 * Unidade de Controle de Interrupções.
 
-![cpu](FIGURAS/cpu.png)
+</div>
+</div>
 
 ---
 
@@ -225,7 +270,7 @@ Os microcontroladores são formados por:
     * Lógicas (**OR**, **AND**, **NOT**).
     * Deslocamento (*shift, rotate*).
 
-![ULA](FIGURAS/ULA.pdf)
+![ULA](images/muctrl/ULA.png)
 
 ---
 
@@ -243,7 +288,7 @@ Os microcontroladores são formados por:
     * Processamento dos dados.
     * Armazenamento dos dados.
 
-![SistemaEmbarcado02](FIGURAS/SistemaEmbarcado2.png)
+![SistemaEmbarcado02](images/muctrl/SistemaEmbarcado2.png)
 <small>Fonte - (GARCIA, 2018).</small>
 
 ---
@@ -253,7 +298,7 @@ Os microcontroladores são formados por:
 * Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre. 
 * O projeto Arduino começou em 2005 como um programa para estudantes do **Instituto de Design de Interação Ivrea**, em Ivrea, Itália, com o objetivo de fornecer uma maneira fácil e de baixo custo para iniciantes e profissionais criarem dispositivos que interagem com seu ambiente usando sensores e atuadores.
 
-![Arduino-uno](FIGURAS/Arduino-uno.png)
+![Arduino-uno](images/muctrl/Arduino-uno.png)
 <small>Fonte - https://pt.wikipedia.org/wiki/Arduino</small>
 
 ---
@@ -271,7 +316,7 @@ Os microcontroladores são formados por:
 * A plataforma Arduino é programada utilizando linguagem de programação fortemente baseada em C/C++.
 * O projeto Arduino fornece um ambiente de desenvolvimento integrado (IDE) baseado no projeto da linguagem Processing.
 
-![Arduino_IDE](FIGURAS/Arduino_IDE.png)
+![Arduino_IDE](images/muctrl/Arduino_IDE.png)
 
 ---
 

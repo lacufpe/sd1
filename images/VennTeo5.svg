@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="99.313774mm"
+   height="146.93874mm"
+   viewBox="0 0 99.313775 146.93874"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   sodipodi:docname="VennTeo5.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4153007"
+     inkscape:cx="-22.256755"
+     inkscape:cy="217.6216"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-87.908189,-65.21893)">
+    <g
+       id="g26"
+       transform="translate(58.208371)">
+      <circle
+         style="fill:none;fill-opacity:0.523121;stroke:#0000ff;stroke-width:1.05833;stroke-linecap:square"
+         id="path1"
+         cx="60.83588"
+         cy="96.354965"
+         r="30.606871" />
+      <circle
+         style="fill:#0000ff;fill-opacity:0.555354;stroke:#0000ff;stroke-width:1.05833;stroke-linecap:square"
+         id="circle3"
+         cx="60.835876"
+         cy="96.354965"
+         r="30.606871" />
+      <path
+         id="circle23"
+         style="fill:#00ffff;fill-opacity:0.555354;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         d="M 79.414119,72.041253 A 30.606871,30.606871 0 0 0 67.270674,96.355014 30.606871,30.606871 0 0 0 79.356758,120.62588 30.606871,30.606871 0 0 0 91.442842,96.355014 30.606871,30.606871 0 0 0 79.414119,72.041253 Z" />
+      <circle
+         style="fill:none;fill-opacity:0.523121;stroke:#00ff00;stroke-width:1.05833;stroke-linecap:square"
+         id="circle1"
+         cx="97.877533"
+         cy="96.354965"
+         r="30.606871" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         x="31.816509"
+         y="72.627274"
+         id="text14"><tspan
+           sodipodi:role="line"
+           id="tspan14"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.05833"
+           x="31.816509"
+           y="72.627274">A</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         x="120.19989"
+         y="71.766342"
+         id="text15"><tspan
+           sodipodi:role="line"
+           id="tspan15"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.05833"
+           x="120.19989"
+           y="71.766342">B</tspan></text>
+    </g>
+    <g
+       id="g25"
+       transform="translate(-58.208354,84.666671)">
+      <circle
+         style="fill:#0000ff;fill-opacity:0.493648;stroke:#0000ff;stroke-width:1.05833;stroke-linecap:square"
+         id="circle11"
+         cx="177.25258"
+         cy="96.354965"
+         r="30.606871" />
+      <path
+         id="circle24"
+         style="fill:#00ffff;fill-opacity:0.523121;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         d="m 177.25259,65.748097 a 30.606871,30.606871 0 0 0 -30.60692,30.606917 30.606871,30.606871 0 0 0 30.60692,30.606916 30.606871,30.606871 0 0 0 18.52083,-6.33605 30.606871,30.606871 0 0 0 18.52084,6.33605 30.606871,30.606871 0 0 0 30.60692,-30.606916 30.606871,30.606871 0 0 0 -30.60692,-30.606917 30.606871,30.606871 0 0 0 -18.46347,6.293156 30.606871,30.606871 0 0 0 -18.5782,-6.293156 z" />
+      <circle
+         style="fill:none;fill-opacity:0.523121;stroke:#00ff00;stroke-width:1.05833;stroke-linecap:square"
+         id="circle12"
+         cx="214.29428"
+         cy="96.354965"
+         r="30.606871" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         x="148.23318"
+         y="72.627274"
+         id="text17"><tspan
+           sodipodi:role="line"
+           id="tspan17"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.05833"
+           x="148.23318"
+           y="72.627274">A</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:square"
+         x="236.61665"
+         y="71.766342"
+         id="text18"><tspan
+           sodipodi:role="line"
+           id="tspan18"
+           style="fill:#000000;fill-opacity:1;stroke-width:1.05833"
+           x="236.61665"
+           y="71.766342">B</tspan></text>
+    </g>
+  </g>
+</svg>

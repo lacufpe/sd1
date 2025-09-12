@@ -122,11 +122,11 @@ $$M = 2^4 = 16$$
 
 * Binário para hexadecimal: agrupe os bits de quatro em quatro, substitua cada grupo pelo seu valor hexadecimal.
     * **Exemplo:** $11010100001110101_b$
-        * Agrupe: $1\_1010\_1000\_0111\_0101_b$
+        * Agrupe: $1\\_1010\\_1000\\_0111\\_0101_b$
         * Converta: $1A875_h$ 
 * Hexadecimal para binário: processo inverso - cada dígito hexadecimal gera 4 bits em binário.
     * **Exemplo:** $4ED2_h$
-        * Converta: $0100\_1110\_1101\_0010_b$
+        * Converta: $0100\\_1110\\_1101\\_0010_b$
 
 ---
 

@@ -389,17 +389,39 @@ $a \cdot (a + b) = a$
 
 # Teorema 5
 
+<div class="columns">
+<div class="column">
+
 $a + \overline{a} \cdot b = a + b $
 
 $a \cdot (\overline{a} + b) = a \cdot b$
+
+</div>
+<div class="column">
+
+![](./images/VennTeo5.svg)
+
+</div>
+</div>
 
 ---
 
 # Teorema 6
 
+<div class="columns">
+<div class="column">
+
 $a \cdot b + a \cdot \overline{b} = a $
 
 $(a + b) \cdot (a + \overline{b}) = a$
+
+</div>
+<div class="column">
+
+![](./images/VennTeo6.svg)
+
+</div>
+</div>
 
 ---
 
@@ -411,11 +433,38 @@ $(a + b) \cdot (a + \overline{b} + c) = (a + b) \cdot (a + c)$
 
 ---
 
+# Teorema 7
+
+$a \cdot b + a \cdot \overline{b} \cdot c = a \cdot b + a \cdot c $
+
+![](./images/VennTeo7a.svg)
+
+---
+
+# Teorema 7
+
+$(a + b) \cdot (a + \overline{b} + c) = (a + b) \cdot (a + c)$
+
+![](./images/VennTeo7b.svg)
+
+---
+
 # Teorema 8 - Leis de DeMorgan
+
+<div class="columns">
+<div class="column">
 
 $\overline{a + b} = \overline{a} \cdot \overline{b} $
 
 $\overline{a \cdot b} = \overline{a} + \overline{b}$
+
+</div>
+<div class="column">
+
+![](./images/VennTeo8.svg)
+
+</div>
+</div>
 
 ---
 
@@ -424,6 +473,22 @@ $\overline{a \cdot b} = \overline{a} + \overline{b}$
 $a \cdot b + \overline{a} \cdot c + b \cdot c = a \cdot b + \overline{a} \cdot c$
 
 $(a + b) \cdot (\overline{a} + c) \cdot (b + c) = (a + b) \cdot (\overline{a} + c)$
+
+---
+
+# Teorema 9 - Teorema do Consenso
+
+$a \cdot b + \overline{a} \cdot c + b \cdot c = a \cdot b + \overline{a} \cdot c$
+
+![](./images/VennTeo9a.svg)
+
+---
+
+# Teorema 9 - Teorema do Consenso
+
+$(a + b) \cdot (\overline{a} + c) \cdot (b + c) = (a + b) \cdot (\overline{a} + c)$
+
+![](./images/VennTeo9b.svg)
 
 ---
 
