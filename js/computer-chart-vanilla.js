@@ -28,9 +28,9 @@ class ComputerEvolutionChart {
     this.chartConfig = {
       performance: { key: 'performance', color: '#2563eb', name: 'Performance (ops/sec)', scale: 'log' },
       performancePrice: { key: 'performancePrice', color: '#dc2626', name: 'Performance/Preço', scale: 'log' },
-      power: { key: 'power', color: '#16a34a', name: 'Potência (Watts)', scale: 'linear' },
+      power: { key: 'power', color: '#16a34a', name: 'Potência (Watts)', scale: 'log' },
       memory: { key: 'memory', color: '#7c3aed', name: 'Memória (KB)', scale: 'log' },
-      size: { key: 'size', color: '#ea580c', name: 'Tamanho (m³)', scale: 'log' }
+      size: { key: 'size', color: '#ea580c', name: 'Volume', scale: 'log' }
     };
   }
 
@@ -39,13 +39,19 @@ class ComputerEvolutionChart {
     if (num >= 1e9) return (num / 1e9).toFixed(1) + 'B';
     if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
     if (num >= 1e3) return (num / 1e3).toFixed(1) + 'K';
-    return num.toString();
+    if (num >= 1) return num.toFixed(1);
+    return (num * 1e3).toFixed(1) + 'm';
+  }
+
+  formatSize(num) {
+    if (num >= 1) return num.toFixed(1) + ' m³';
+    return (num * 1e3).toFixed(1) + ' l';
   }
 
   formatMemory(kb) {
     if (kb >= 1024 * 1024) return (kb / (1024 * 1024)).toFixed(1) + 'GB';
     if (kb >= 1024) return (kb / 1024).toFixed(1) + 'MB';
-    return kb + 'KB';
+    return kb.toFixed(1) + 'KB';
   }
 
   render() {
@@ -95,7 +101,7 @@ class ComputerEvolutionChart {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     // Configurações do gráfico
-    const padding = { top: 40, right: 40, bottom: 60, left: 80 };
+    const padding = { top: 40, right: 40, bottom: 60, left: 110 };
     const chartWidth = canvas.width - padding.left - padding.right;
     const chartHeight = canvas.height - padding.top - padding.bottom;
     
@@ -154,7 +160,7 @@ class ComputerEvolutionChart {
   drawAxes(ctx, padding, chartWidth, chartHeight, minYear, maxYear, minValue, maxValue, config) {
     ctx.strokeStyle = '#000';
     ctx.lineWidth = 2;
-    ctx.font = '12px Arial';
+    ctx.font = '20px Arial';
     ctx.fillStyle = '#000';
     
     // Eixo X
@@ -173,30 +179,37 @@ class ComputerEvolutionChart {
     for (let i = 0; i <= 5; i++) {
       const year = minYear + ((maxYear - minYear) / 5) * i;
       const x = padding.left + (chartWidth / 5) * i;
-      ctx.fillText(Math.round(year).toString(), x - 15, padding.top + chartHeight + 20);
+      ctx.textAlign = 'center';
+      ctx.fillText(Math.round(year).toString(), x, padding.top + chartHeight + 20);
     }
     
     // Labels do eixo Y
     for (let i = 0; i <= 5; i++) {
-      const value = minValue + ((maxValue - minValue) / 5) * i;
+      let value = minValue + ((maxValue - minValue) / 5) * i;
       const y = padding.top + chartHeight - (chartHeight / 5) * i;
       let label;
       
       if (config.scale === 'log') {
-        const actualValue = Math.pow(10, value);
-        label = config.key === 'memory' ? this.formatMemory(actualValue) : this.formatNumber(actualValue);
+        value = Math.pow(10, value);
+      }
+      if (config.key === 'memory') {
+        label = this.formatMemory(value);
+      } else if (config.key === 'size') {
+        label = this.formatSize(value);
       } else {
-        label = config.key === 'memory' ? this.formatMemory(value) : this.formatNumber(value);
+        label = this.formatNumber(value);
       }
       
-      ctx.fillText(label, padding.left - 70, y + 4);
+      ctx.textAlign = 'right';
+      ctx.fillText(label, padding.left - 4, y + 4);
     }
     
     // Título do eixo Y
     ctx.save();
-    ctx.translate(20, padding.top + chartHeight / 2);
+    ctx.translate(20, padding.top + chartHeight / 2 );
     ctx.rotate(-Math.PI / 2);
-    ctx.font = '14px Arial';
+    ctx.font = '22px Arial';
+    ctx.textAlign = 'center';
     ctx.fillText(config.name, 0, 0);
     ctx.restore();
   }

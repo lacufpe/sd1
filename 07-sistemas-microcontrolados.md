@@ -113,6 +113,23 @@ Departamento de Engenharia Mecânica
 
 ---
 
+### Transistores
+
+<div class="columns">
+<div class="column">
+
+![firsttransistor](images/replica-of-first-transistor.webp)
+
+</div>
+<div class="column">
+
+![transistors](images/transistors1960.webp)
+
+</div>
+</div>
+
+---
+
 ### Produção de um CI:
 
 ![producaoCI](images/muctrl/producaoCI.png)
@@ -165,6 +182,12 @@ Departamento de Engenharia Mecânica
 ![appleA5](images/muctrl/appleA5.png)
 
 <small>Fonte - (PATTERSON, 2017).</small>
+
+---
+
+![transistorCount](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Moore%27s_Law_Transistor_Count_1970-2020.png/1280px-Moore%27s_Law_Transistor_Count_1970-2020.png)
+
+<small>Fonte - (wikipedia).</small>
 
 ---
 
