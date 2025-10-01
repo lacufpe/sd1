@@ -18,14 +18,13 @@ Departamento de Engenharia Mecânica
 
 - Ou seja, cuja a saída dependa apenas do estado atual das entradas:
 
+<div class="mermaid">
+    graph LR
+    A[Entradas] --> B[Sistema Combinacional]
+    B --> C[Saídas]
+</div>
 
-```mermaid
-graph LR
-    Entradas --> Sistema_Combinacional
-    Sistema_Combinacional --> Saídas
-```
-
-**Saída = f(Entradas atuais)**
+$$\text{Saída} = f(\text{Entradas atuais})$$
 
 ---
 
@@ -44,15 +43,15 @@ graph LR
 
 <div class="flex justify-center">
 
-```mermaid
+<div class="mermaid">
 graph LR
 Entradas --> Sistema_Sequencial
 Sistema_Sequencial --> Saídas
 Sistema_Sequencial --> Memória/Estado
 Memória/Estado --> Sistema_Sequencial
-```
+</div>
 
-**Saída = f(Entradas atuais, Estado anterior)**
+$$\text{Saída} = f(\text{Entradas atuais, Estado anterior})$$
 
 </div>
 </div>
@@ -74,6 +73,7 @@ Memória/Estado --> Sistema_Sequencial
 </div>
 
 <div class="column">
+
 
 ![](images/latchInversores.svg)
 
@@ -127,17 +127,6 @@ Memória/Estado --> Sistema_Sequencial
 
 ---
 
-# Análise temporal
-
----
-
-# Capacidade de Memória
-
-- Isso significa que um *latch* tem capacidade de memorizar um bit de dado digital presente na entrada **D** na transição que desabilita (transição de descida) o *enable*
-
-- Esta é a base da memória digital: a capacidade de armazenar informação binária
-
----
 
 # Latch com Portas Lógicas
 
@@ -174,12 +163,13 @@ Memória/Estado --> Sistema_Sequencial
 
 <div class="column">
 
-| S | R | Q | Q̅ | | Operação |
-|---|---|---|---|-|----------|
-| 0 | 0 | Q | Q̅ | | Manter   |
-| 0 | 1 | 0 | 1 | | Reset    |
-| 1 | 0 | 1 | 0 | | Set      |
-| 1 | 1 | 0 | 0 | | Proibido |
+| S | R | En | | Q | Q̅ | | Operação |
+|---|---|----|-|---|---|-|----------|
+| x | x | 0  | | Q | Q̅ | | Manter   |
+| 0 | 0 | 1  | | Q | Q̅ | | Manter   |
+| 0 | 1 | 1  | | 0 | 1 | | Reset    |
+| 1 | 0 | 1  | | 1 | 0 | | Set      |
+| 1 | 1 | 1  | | 0 | 0 | | Proibido |
 
 </div>
 
@@ -225,23 +215,7 @@ Memória/Estado --> Sistema_Sequencial
 
 <div class="column">
 
-```
-Latch D:
-
-            ┌─────┐
-D ──────────┤D    ├─── Q
-            │     │
-EN ─────────┤     ├─── Q̅
-            └─────┘
-
-Flip-Flop D:
-
-            ┌─────┐
-D ──────────┤D    ├─── Q
-            │     │
-CLK ────────┤>    ├─── Q̅
-            └─────┘
-```
+![](images/latchFlipFlop.svg)
 
 </div>
 

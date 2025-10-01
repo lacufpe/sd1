@@ -27,9 +27,11 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/mermaid/mermaid.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/mermaid/mermaid.js"></script> -->
     
-    <script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        // mermaid.initialize({ startOnLoad: true });
         Reveal.initialize({
             // Configuração básica
             hash: true,
@@ -46,7 +48,23 @@
             maxScale: 0.8, // Mantém o tamanho máximo em 80%
 
             // Outros plugins, etc.
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+        }).then(() => {
+            mermaid.initialize({ startOnLoad: false,
+                theme: 'default',
+                themeVariables: {
+                    fontSize: '40px'
+                },
+                flowchart: {
+                    padding: 40,  // Aumenta o padding interno dos blocos
+                    nodeSpacing: 100,  // Espaçamento horizontal entre nós
+                    rankSpacing: 80,    // Espaçamento vertical entre níveis
+                    htmlLabels: false,
+                    curve: 'basis',
+                    useMaxWidth: false
+                }
+             });
+            mermaid.run();
         });
 
     </script>

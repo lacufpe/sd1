@@ -1,70 +1,349 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
+
 <!-- created: Wed Sep 03 15:13:16 BRT 2025 -->
 
 <svg
-   xmlns:svg="http://www.w3.org/2000/svg"
+   width="185.4216mm"
+   height="88.202065mm"
+   viewBox="64 183 1236.144 588.01378"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="latchDNAND.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   width="94.35mm"
-   height="44.1mm"
-   viewBox="64 183 629 294">
-<g stroke-linecap="square">
-<path d="M 540,240 L 580,240 L 620,240" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 220,460 L 220,240 L 260,240" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 540,420 L 560,420 L 620,420" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 180,340 L 180,420 L 260,420" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 360,440 L 440,440" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 140,200 L 180,200 L 260,200" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 360,220 L 440,220" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 140,460 L 220,460 L 260,460" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 440,260 L 400,260 L 400,300 L 560,300 L 560,420" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 440,400 L 400,400 L 400,360 L 580,360 L 580,240" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 180,200 L 180,300" stroke="#000000" stroke-width="4.0" fill="none"/>
-<g>
-<circle cx="580.0" cy="240.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-<circle cx="560.0" cy="420.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-<circle cx="180.0" cy="200.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-<circle cx="220.0" cy="460.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-</g>
-<g>
-<path d="M 490,270 L 441,270 L 441,210 L 490,210 C 500,210 520,220 519,240 C 519,260 500,270 490,270 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="530.0" cy="240.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 490,450 L 441,450 L 441,390 L 490,390 C 500,390 520,400 519,420 C 519,440 500,450 490,450 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="530.0" cy="420.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 310,250 L 261,250 L 261,190 L 310,190 C 320,190 340,200 339,220 C 339,240 320,250 310,250 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="350.0" cy="220.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 310,470 L 261,470 L 261,410 L 310,410 C 320,410 340,420 339,440 C 339,460 320,470 310,470 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="350.0" cy="440.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 109,185 L 139,185 L 139,215 L 109,215 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="124.0" cy="200.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="end" x="95.0" y="209.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">D</tspan></text>
-</g>
-<g>
-<path d="M 109,445 L 139,445 L 139,475 L 109,475 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="124.0" cy="460.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="end" x="95.0" y="469.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">En</tspan></text>
-</g>
-<g>
-<circle cx="636.0" cy="240.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<circle cx="636.0" cy="240.0" r="15.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="start" x="665.0" y="249.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">Q</tspan></text>
-</g>
-<g>
-<circle cx="636.0" cy="420.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<circle cx="636.0" cy="420.0" r="15.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="start" x="665.0" y="429.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">!Q</tspan></text>
-</g>
-<g>
-<path d="M 192,301 L 180,319 L 168,301 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="180.0" cy="330.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-</g>
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3656819"
+     inkscape:cx="175.37027"
+     inkscape:cy="83.474784"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <g
+     stroke-linecap="square"
+     id="g26"
+     transform="matrix(2,0,0,2.0137931,-75.50398,-187.54484)"
+     style="stroke-width:0.498285">
+    <path
+       d="m 540,240 h 40 40"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path1" />
+    <path
+       d="M 220,460 V 240 h 40"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path2" />
+    <path
+       d="m 540,420 h 20 60"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path3" />
+    <path
+       d="m 180,340 v 80 h 80"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path4" />
+    <path
+       d="m 360,440 h 80"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path5" />
+    <path
+       d="m 140,200 h 40 80"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path6" />
+    <path
+       d="m 360,220 h 80"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path7" />
+    <path
+       d="m 140,460 h 80 40"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path8" />
+    <path
+       d="m 440,260 h -40 v 40 h 160 v 120"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path9" />
+    <path
+       d="M 440,400 H 400 V 360 H 580 V 240"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path10" />
+    <path
+       d="M 180,200 V 300"
+       stroke="#000000"
+       stroke-width="1.99314"
+       fill="none"
+       id="path11" />
+    <g
+       id="g14"
+       style="stroke-width:0.498285">
+      <circle
+         cx="580"
+         cy="240"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="#000000"
+         id="circle11" />
+      <circle
+         cx="560"
+         cy="420"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="#000000"
+         id="circle12" />
+      <circle
+         cx="180"
+         cy="200"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="#000000"
+         id="circle13" />
+      <circle
+         cx="220"
+         cy="460"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="#000000"
+         id="circle14" />
+    </g>
+    <g
+       id="g15"
+       style="stroke-width:0.498285">
+      <path
+         d="m 490,270 h -49 v -60 h 49 c 10,0 30,10 29,30 0,20 -19,30 -29,30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path14" />
+      <circle
+         cx="530"
+         cy="240"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle15" />
+    </g>
+    <g
+       id="g16"
+       style="stroke-width:0.498285">
+      <path
+         d="m 490,450 h -49 v -60 h 49 c 10,0 30,10 29,30 0,20 -19,30 -29,30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path15" />
+      <circle
+         cx="530"
+         cy="420"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle16" />
+    </g>
+    <g
+       id="g17"
+       style="stroke-width:0.498285">
+      <path
+         d="m 310,250 h -49 v -60 h 49 c 10,0 30,10 29,30 0,20 -19,30 -29,30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path16" />
+      <circle
+         cx="350"
+         cy="220"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle17" />
+    </g>
+    <g
+       id="g18"
+       style="stroke-width:0.498285">
+      <path
+         d="m 310,470 h -49 v -60 h 49 c 10,0 30,10 29,30 0,20 -19,30 -29,30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path17" />
+      <circle
+         cx="350"
+         cy="440"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle18" />
+    </g>
+    <g
+       id="g19"
+       style="stroke-width:0.498285">
+      <path
+         d="m 109,185 h 30 v 30 h -30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path18" />
+      <circle
+         cx="124"
+         cy="200"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle19" />
+      <text
+         text-anchor="end"
+         x="95"
+         y="209"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.498285"
+         id="text19"><tspan
+           style="font-style:italic;stroke-width:0.498285"
+           id="tspan19">D</tspan></text>
+    </g>
+    <g
+       id="g20"
+       style="stroke-width:0.498285">
+      <path
+         d="m 109,445 h 30 v 30 h -30 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path19" />
+      <circle
+         cx="124"
+         cy="460"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle20" />
+      <text
+         text-anchor="end"
+         x="95"
+         y="469"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.498285"
+         id="text20"><tspan
+           style="font-style:italic;stroke-width:0.498285"
+           id="tspan20">En</tspan></text>
+    </g>
+    <g
+       id="g22"
+       style="stroke-width:0.498285">
+      <circle
+         cx="636"
+         cy="240"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle21" />
+      <circle
+         cx="636"
+         cy="240"
+         r="15"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle22" />
+      <text
+         text-anchor="start"
+         x="665"
+         y="249"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.498285"
+         id="text22"><tspan
+           style="font-style:italic;stroke-width:0.498285"
+           id="tspan22">Q</tspan></text>
+    </g>
+    <g
+       id="g24"
+       style="stroke-width:0.498285">
+      <circle
+         cx="636"
+         cy="420"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle23" />
+      <circle
+         cx="636"
+         cy="420"
+         r="15"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle24" />
+      <text
+         text-anchor="start"
+         x="665"
+         y="429"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.498285"
+         id="text24"><tspan
+           style="font-style:italic;stroke-width:0.498285"
+           id="tspan24">!Q</tspan></text>
+    </g>
+    <g
+       id="g25"
+       style="stroke-width:0.498285">
+      <path
+         d="m 192,301 -12,18 -12,-18 z"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="path24" />
+      <circle
+         cx="180"
+         cy="330"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.99314"
+         fill="none"
+         id="circle25" />
+    </g>
+  </g>
 </svg>

@@ -1,46 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
+
 <!-- created: Wed Sep 03 14:42:32 BRT 2025 -->
 
 <svg
-   xmlns:svg="http://www.w3.org/2000/svg"
+   width="110.304mm"
+   height="59.703068mm"
+   viewBox="277 203 735.35999 398.02045"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="latchInversores.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   width="56.4mm"
-   height="29.85mm"
-   viewBox="277 203 376 199">
-<g stroke-linecap="square">
-<path d="M 480,340 L 540,340 L 580,340" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 340,220 L 380,220 L 440,220" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 480,220 L 540,220 L 580,220" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 540,340 L 540,400 L 340,400 L 340,260 L 380,260 L 380,220" stroke="#000000" stroke-width="4.0" fill="none"/>
-<path d="M 440,340 L 380,340 L 380,280 L 540,280 L 540,220" stroke="#000000" stroke-width="4.0" fill="none"/>
-<g>
-<circle cx="540.0" cy="340.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-<circle cx="380.0" cy="220.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-<circle cx="540.0" cy="220.0" r="4.0" stroke="#000000" stroke-width="4.0" fill="#000000" />
-</g>
-<g>
-<path d="M 441,208 L 459,220 L 441,232 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="470.0" cy="220.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 441,328 L 459,340 L 441,352 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="470.0" cy="340.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-</g>
-<g>
-<path d="M 309,205 L 339,205 L 339,235 L 309,235 Z" stroke="#000000" stroke-width="4.0" fill="none"/>
-<circle cx="324.0" cy="220.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="end" x="295.0" y="229.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">A</tspan></text>
-</g>
-<g>
-<circle cx="596.0" cy="220.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<circle cx="596.0" cy="220.0" r="15.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="start" x="625.0" y="229.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">Q</tspan></text>
-</g>
-<g>
-<circle cx="596.0" cy="340.0" r="9.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<circle cx="596.0" cy="340.0" r="15.0" stroke="#000000" stroke-width="4.0" fill="none" />
-<text text-anchor="start" x="625.0" y="349.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">!Q</tspan></text>
-</g>
-</g>
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.8147162"
+     inkscape:cx="104.8063"
+     inkscape:cy="56.48882"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg15" />
+  <g
+     stroke-linecap="square"
+     id="g15"
+     transform="matrix(2,0,0,2.0205128,-283.28799,-209.1949)"
+     style="stroke-width:0.497455">
+    <path
+       d="m 480,340 h 60 40"
+       stroke="#000000"
+       stroke-width="1.98982"
+       fill="none"
+       id="path1" />
+    <path
+       d="m 340,220 h 40 60"
+       stroke="#000000"
+       stroke-width="1.98982"
+       fill="none"
+       id="path2" />
+    <path
+       d="m 480,220 h 60 40"
+       stroke="#000000"
+       stroke-width="1.98982"
+       fill="none"
+       id="path3" />
+    <path
+       d="m 540,340 v 60 H 340 V 260 h 40 v -40"
+       stroke="#000000"
+       stroke-width="1.98982"
+       fill="none"
+       id="path4" />
+    <path
+       d="M 440,340 H 380 V 280 H 540 V 220"
+       stroke="#000000"
+       stroke-width="1.98982"
+       fill="none"
+       id="path5" />
+    <g
+       id="g7"
+       style="stroke-width:0.497455">
+      <circle
+         cx="540"
+         cy="340"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="#000000"
+         id="circle5" />
+      <circle
+         cx="380"
+         cy="220"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="#000000"
+         id="circle6" />
+      <circle
+         cx="540"
+         cy="220"
+         r="4"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="#000000"
+         id="circle7" />
+    </g>
+    <g
+       id="g8"
+       style="stroke-width:0.497455">
+      <path
+         d="m 441,208 18,12 -18,12 z"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="path7" />
+      <circle
+         cx="470"
+         cy="220"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle8" />
+    </g>
+    <g
+       id="g9"
+       style="stroke-width:0.497455">
+      <path
+         d="m 441,328 18,12 -18,12 z"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="path8" />
+      <circle
+         cx="470"
+         cy="340"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle9" />
+    </g>
+    <g
+       id="g10"
+       style="stroke-width:0.497455">
+      <path
+         d="m 309,205 h 30 v 30 h -30 z"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="path9" />
+      <circle
+         cx="324"
+         cy="220"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle10" />
+      <text
+         text-anchor="end"
+         x="295"
+         y="229"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.497455"
+         id="text10"><tspan
+           style="font-style:italic;stroke-width:0.497455"
+           id="tspan10">A</tspan></text>
+    </g>
+    <g
+       id="g12"
+       style="stroke-width:0.497455">
+      <circle
+         cx="596"
+         cy="220"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle11" />
+      <circle
+         cx="596"
+         cy="220"
+         r="15"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle12" />
+      <text
+         text-anchor="start"
+         x="625"
+         y="229"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.497455"
+         id="text12"><tspan
+           style="font-style:italic;stroke-width:0.497455"
+           id="tspan12">Q</tspan></text>
+    </g>
+    <g
+       id="g14"
+       style="stroke-width:0.497455">
+      <circle
+         cx="596"
+         cy="340"
+         r="9"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle13" />
+      <circle
+         cx="596"
+         cy="340"
+         r="15"
+         stroke="#000000"
+         stroke-width="1.98982"
+         fill="none"
+         id="circle14" />
+      <text
+         text-anchor="start"
+         x="625"
+         y="349"
+         fill="#000000"
+         style="font-size:24px;stroke-width:0.497455"
+         id="text14"><tspan
+           style="font-style:italic;stroke-width:0.497455"
+           id="tspan14">!Q</tspan></text>
+    </g>
+  </g>
 </svg>
