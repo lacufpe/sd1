@@ -1,20 +1,28 @@
 # Revisão de C e Entrada e Saídas Digitais
 
-## Objetivos
-
-O objetivo desse documento é que façamos uma rápida revisão sobre os principais aspectos da linguagem C, como utilizar ela de forma estruturada e enfatizar as diferenças encontradas quando estamos trabalhando com o Arduino, cuja a linguagem é fortemente baseada em C.
+---
 
 ## Características da Linguagem C
 
-A linguagem C é uma linguagem de programação compilada de propósito geral, estruturada, imperativa, procedural, padronizada pela ISO 9899:2024 (do inglês *International Organization for Standardization*), criada em 1972 por Dennis Richie na empresa AT&T Bell Labs para desenvolvimento do sistema operacional Unix (originalmente escrito em assembly).
+Compilada, de propósito geral, estruturada, imperativa, procedural, padronizada pela ISO 9899:2024 (do inglês *International Organization for Standardization*)
+
+Criada em 1972 por Dennis Richie.
+
+---
 
 ### Expressões
 
-Na linguagem C, uma expressão é uma combinação de **variáveis**, **constantes** e **operadores** que pode ser avaliada computacionalmente, resultando em um valor. O valor resultante é chamado de valor da expressão.
+Uma combinação de **variáveis**, **constantes** e **operadores** que resulta em um valor, chamado de valor da expressão.
+
+![Fig1](./images/Expressions_In_C_1.png)
+
+---
 
 ### Variáveis
 
-Uma variável representa um espaço na memória do computador para armazenar um determinado tipo de dado. Na linguagem C, todas as variáveis devem ser explicitamente declaradas. Na declaração da variável deve ser especificados seu **tipo** e seu **nome**:
+Uma variável representa um espaço na memória do computador para armazenar um determinado tipo de dado. 
+
+Todas as variáveis em C devem ser explicitamente declaradas por seu **tipo** e seu **nome**:
 
 #### Exemplos:
 
@@ -25,19 +33,23 @@ unsigned long umaVariavel, maisUmaVariavel;
 char x, X;     //C e case sansitive, logo X diferente de x
 ```
 
+---
+
 #### Tipos de Variáveis no Arduino
 
 * `bool:` valor verdadeiro (`true` = 1) ou falso (`false` = 0).
-* `char:` um caractere (8 bits).
+* `char:` um caractere (8 bits) - pode servir como número natural de 8 bits.
 * `byte:` um byte, ou sequência de 8 bits.
-* `int:` número inteiro de 16 bits com sinal em complemento para 2 (-32768 a 32767).
-* `unsigned int:` número inteiro de 16 bits sem sinal (0 a 65535).
-* `long:` número inteiro de 32 bits com sinal em complemento para 2 (-2147483648 a 2147483647).
-* `unsigned long:` número inteiro de 32 bits sem sinal (0 a 4294967295)
-* `float:` número real de precisão simples (ponto flutuante), 32 bits.
-* `double:` número real de precisão dupla (ponto flutuante), 64 bits.
+* `int:` número inteiro (complemento a 2) de 16 bits (-32768 a 32767).
+* `unsigned int:` número natural de 16 bits sem sinal (0 a 65535).
+* `long:` número inteiro (complemento a 2) de 32 bits (-2147483648 a 2147483647).
+* `unsigned long:` número natural de 32 bits sem sinal (0 a 4294967295)
+* `float:` número real (ponto flutuante) de precisão simples - 32 bits.
+* `double:` número real (ponto flutuante) de precisão dupla - 64 bits.
 * `string:` sequência de caracteres.
-* `void:` tipo vazio (não tem tipo).
+* `void:` tipo vazio (não é armazenado na memória).
+
+---
 
 ### Operadores
 
@@ -46,20 +58,25 @@ Um operador é um conjunto de um ou mais caracteres que serve para operar sobre 
 ```c
 x = 5+3; //nesse caso 5 e 3 sao constantes;
 //variaveis podem receber quase qualquer nome, 
-//use isso para deixer seu codigo mais legivel:
 temperaturaAtual = temperaturaSensor + temperaturaOffset; 
 
 //Algumas particularidades de C:
-x++;     // x = x + 1;
-++x;     // x = x = 1;
+x++;     // retorna x e incrementa em 1 depois;
+++x;     // retorna x + 1, que passa a ser o novo valor de x;
 x += 3;  // x = x + 3;
 x /= 2;  // x = x/2;
-x = y%2; // x = 0, se y par e x = 1 se y impar;
+x = y%2; // o resto da divisão de y por 2 - x = 0, se y par e x = 1 se y impar;
 ```
 
-#### Tipos de Operadores
+--
 
-Segue os diferentes tipos de operadores encontrados em C:
+* **Operador de atribuição:**
+
+| | |
+|---|---|
+| `=` | $\rightarrow$ atribui um valor a uma variável. |
+
+--
 
 * **Operadores aritméticos:**
 
@@ -71,12 +88,16 @@ Segue os diferentes tipos de operadores encontrados em C:
 | `/` | $\rightarrow$ divisão; |
 | `%` | $\rightarrow$ resto da divisão inteira. |
 
-* **Operadores lógicos**: usados em tomadas de decisão, devolvem `1` se **verdadeiro** e `0` se **falso**:
+--
+
+* **Operadores lógicos**: usados em tomadas de decisão, devolvem `1` se **verdadeiro** e `0` se **falso**.
+* Qualquer valor diferente de 0 é **verdadeiro**.
 
 | | |
 |---|---|
 | `&&` | $\rightarrow$ `E` lógico; |
-| `||` | $\rightarrow$ `OU` lógico; |
+| `\|\|` | $\rightarrow$ `OU` lógico; |
+| `!` | $\rightarrow$ inversão lógica; |
 | `==` | $\rightarrow$ igualdade; |
 | `!=` | $\rightarrow$ desigualdade; |
 | `>` | $\rightarrow$ maior que; |
@@ -84,29 +105,53 @@ Segue os diferentes tipos de operadores encontrados em C:
 | `>=` | $\rightarrow$ maior ou igual; |
 | `<=` | $\rightarrow$ menor ou igual; |
 
+--
+
 * **Operadores bit a bit:**
+
+<div class=columns>
+<div class=column>
 
 | | |
 |---|---|
 | `&` | $\rightarrow$ `E` lógico bit a bit; |
-| `|` | $\rightarrow$ `OU` lógico bit a bit; |
-| `!` | $\rightarrow$ Inversão bit a bit; |
+| `\|` | $\rightarrow$ `OU` lógico bit a bit; |
+| `~` | $\rightarrow$ Inversão bit a bit; |
 | `>>` | $\rightarrow$ deslocamento binário a direita; |
 | `<<` | $\rightarrow$ deslocamento binário a esquerda; |
 
-* **Operadores de atribuição:**
+</div>
+<div class=column>
 
-| | |
-|---|---|
-| `=` | $\rightarrow$ atribui um valor a uma variável. |
+```c
+byte a = 0x01;
+byte b = 0x0ff;
+byte c = 0x55;
+byte d;
+
+d = !a; // 0x00
+d = ~a; // 0xfe
+d = c & b; // 0x55
+d = c && b; //0x01
+d = ~c | a; //0xab
+d = c <<1; //0xaa
+```
+
+---
 
 ## Controle de Fluxo
 
-Como dito anteriormente, C é uma linguagem estruturada e procedural em que as linhas do código são lidas de cima para baixo em sequência. Mas nem sempre se deseja que esse fluxo siga essa sequência de cima para baixo, do início ao fim. Para mudar o fluxo dessa execução do código que usamos essas estruturas de controle de fluxo, que podemos separá-las em estruturas de **tomada de decisão** e para **construção de laços**.
+Nem sempre se deseja que o fluxo siga a sequência de cima para baixo, do início ao fim. 
+
+Podemos separar o controle de fluxo em estruturas de **tomada de decisão** e para **construção de laços**.
+
+---
 
 ### Tomada de Decisão
 
 As estruturas de tomada de decisão são utilizadas para definição de ações a serem tomadas a partir do estado atual de uma ou várias variáveis.
+
+---
 
 #### `if-else`
 
@@ -114,44 +159,45 @@ A estrutura `if` é utilizada para decidir se uma parte específica do código s
 
 *Sintaxe:*
 
-`if(` *expressão* `)`
-
-`{`
-
+```c
+if( *expressão* )
+{
   *bloco de comandos*
+}
+```
 
-`}`
+--
 
 *Exemplo:*
 
 ```c
 if( x <= 13)   //Testa se x e menor ou igual a 13;
 {
-	//Caso seja verdade, executa o esta entre as chaves;
+	//Caso seja verdade, executa o que esta entre as chaves;
 	y = 1;
 }
 //Caso falso, pula a execucao para depois das chaves;
 ```
- 
+
+
+--
+
 É utilizado `if-else` se é desejado que uma entre duas partes específicas de código devem ser executada:
 
 *Sintaxe:*
 
-`if(` *expressão* `)`
-
-`{`
-
+```c
+if( *expressão* )
+{
   *bloco de comandos*
-
-`}`
-
-`else`
-
-`{`
-
+}
+else
+{
   *bloco de comandos*
+}
+```
 
-`}`
+--
 
 *Exemplo:*
 
@@ -167,6 +213,8 @@ else
 	y = -1;
 }
 ```
+
+--
 
 Ainda é possível concatenar vários *ifs* e *elses*:
 
@@ -188,37 +236,30 @@ else
 }
 ```
 
+---
+
 #### `switch`
 
-O `switch` é usado quando a partir de uma variável ou expressão que pode assumir vários valores você deseja que para valores específicos dessa variável seja executado um código específico. 
+O `switch` é usado quando você deseja que para valores específicos de uma expressão sejam executados códigos específicos.
 
 *Sintaxe:*
 
-`switch(` *expr* `)`
+```c
+switch( *expr* )
+{
+case op1: 
+  *comandos se* expr == op1 
+  break;
+case op2: 
+  *comandos se* expr == op2 
+  break;
+// ... //
+default: 
+  *comandos se* expr *diferente de todas as anteriores* 
+  break;
+}
 
-`{`
-
-`case op1:` 
-
-  *comandos se* `expr == op1` 
-
-  `break;`
-
-`case op2:` 
-
-  *comandos se* `expr == op2` 
-
-  `break;`
-
-(*$\\cdots$*)
-
-`default:` 
-
-  *comandos se* `expr` *diferente de todas as anteriores* 
-
-  `break;`
-
-`}`
+--
 
 *Exemplo:*
 
@@ -253,9 +294,13 @@ estados estadoFuturo = estadoAtual; //cria uma variavel estadoFuturo do tipo `es
   estadoAtual = estadoFuturo;       //atualiza o estado atual
 ```
 
+---
+
 ### Construções de Laços
 
 As estruturas para construção de laços são usadas quando se quer que uma determinada parte de código seja executada mais de uma vez. 
+
+---
 
 #### `for`
 
@@ -263,14 +308,13 @@ Executa uma parte específica do código por um número específico de vezes.
 
 *Sintaxe:*
 
-`for(` *inicializa a variavel*; *condição de parada*; *incrementa a variavel* `)`
-
-`{`
-
-
+```c
+for( *inicializa a variavel*; *condição de parada*; *incrementa a variavel* )
+{
   *comandos*
+}
 
-`}`
+--
 
 *Exemplo:*
 
@@ -281,20 +325,22 @@ for(i = 0; i < 10; i++)
 }
 ```
 
+---
+
 #### `while`
 
-Executa uma parte específica do código enquanto uma condição é satisfeita.
+Executa uma parte específica do código enquanto uma expressão for verdadeira (diferente de 0).
 
 *Sintaxe:*
 
-`while(` *expressão* `)`
-
-`{`
-
-
+```c
+while( *expressão* )
+{
 *comandos*
+}
+```
 
-`}`
+--
 
 *Exemplo:*
 
@@ -307,20 +353,22 @@ while(i < 10)
 }
 ```
 
+---
+
 #### `do-while`
 
-Executa uma parte específica do código enquanto uma condição é satisfeita, como o *while*. A única diferença é que primeiro o código é executado e só depois a condição é testada. Isso força que o código é executado ao menos uma vez. 
+Executa uma parte específica do código enquanto uma condição é satisfeita, como o *while*. A única diferença é que primeiro o código é executado e só depois a condição é testada. Isso força que o código seja executado ao menos uma vez. 
 
 *Sintaxe:*
 
-`do`
-
-`{`
-
-
+```c
+do
+{
 *comandos*
+} while( *expressão* )
+```
 
-`}` `while(` *expressão* `)`
+--
 
 *Exemplo:*
 
@@ -332,24 +380,27 @@ do
 }while(++i < 10);
 ```
 
+---
+
 ## Funções
 
-Para a construção de programas estruturados, é sempre preferível dividir as grandes tarefas em tarefas menores e utilizar seus resultados parciais para compor o resultado final desejado.
+Funções permitem dividir as grandes tarefas em tarefas menores e utilizar seus resultados parciais para compor o resultado final desejado.
 
 1. **Funções específicas podem ser facilmente reaproveitadas.**
 2. **O código gerado fica mais legível.**
 
+--
+
 *Sintaxe:*
 
-*tipo_retornado nome_da_funcao* `(` *lista de parâmetros* `)`
-
-`{`
-
+```c
+*tipo_retornado* *nome_da_funcao* ( *lista de parâmetros* )
+{
   *corpo da função*
+  return *valor de retorno*;
+}
 
-  `return` *variavel_retorno*;
-
-`}`
+--
 
 *Exemplo:*
 
@@ -368,18 +419,26 @@ bool ValorBit(byte variavel, byte n)
 }
 ```
 
-## Trabalhando com Entradas Digitais
+---
 
-Na última prática trabalhamos apenas com saídas digitais. Como foi falado, na a função `pinMode()` também nos permite utilizar os pinos como entradas digitais. O que é muito importante quando estamos falando de sistemas digitais, precisamos de entradas! Vamos então fazer alguns sistemas simples para vermos como utilizar.
+# GPIO
+
+---
+
+## Entradas Digitais
+
+A função `pinMode()` nos permite utilizar os pinos como entradas ou saídas digitais.
+
+---
 
 ### Configurando um Pino como Entrada
 
-Na Figura 1 é mostrado um sistema bem simples com apenas um botão e uma led feito no Tinkercad. Na prática utilizaremos o *shield* Multifunções que possui três botões e quatro leds, entre outras entradas e saídas. Iremos falar mais sobre ele na próxima aula, hoje apenas utilizaremos os botões e leds.   
+Na Figura 1 é mostrado um sistema com apenas um botão e um led.
 
 ![AS17_SD11](Figuras/AS17_SD11.png)
 <small>Fonte - Produzido pelo autor.</small>
 
-E cole o código mostrado a seguir:
+---
 
 ```c
 // UFPE - DEMEC - SD1 - AS25 - 2022.2 
@@ -419,28 +478,31 @@ void loop()
   delay(100);                   //Espera 
 }
 ```
+---
 
-Para adicionarmos um botão ou chave ao nosso circuito digital é muito importante adicionar um sistema de *pull-up* ou *pull-down* nessa ligação. Um exemplo de um sistema com resistor de *pull-up* mostrado na Figura 2.
+### *Pull-up* e *Pull-down*
+
+Um *pull-up* ou *pull-down* é um resistor que define um valor padrão para uma entrada. Um exemplo de um sistema com resistor de *pull-up* mostrado na Figura 2.
 
 ![Pullup_Resistor](Figuras/Pullup_Resistor.png)
 <small>Fonte - https://en.wikipedia.org/wiki/Pull-up_resistor.</small>
 
-A ideia por trás desse circuito é que o pino de entrada do nosso microcontrolador não fique ligado ``a nada'' quando o botão ou *switch* não estiver acionado. Poderíamos adicionar esse sistema de forma externa a nossa placa Arduino UNO R3, como está ocorrendo no *shield* Multifunções, o microcontrolador já possui esse sistema internamente bastando a nós configurarmos o pino corretamente para usá-lo:
+O microcontrolador do arduino já possui pull-up internamente bastando a nós configurarmos o pino corretamente para usá-lo:
 
 ```c
   pinMode(BOTAO, INPUT_PULLUP); //Colocando o pull-up interno
 ```
 
-### Adicionando um Sistema de *Debounce*
+---
 
-Na vida real chaves e botões apresentam *bounce*. *Bounce* é uma variação espúria no sinal lido quando um botão sai de não apertado para apertado e vice-versa. A Figura 3 mostra justamente a característica do sinal no tempo que gera esse problema.
+### *Debounce*
+
+*Bounce* é uma variação espúria no sinal lido quando um botão sai de não apertado para apertado e vice-versa. A Figura 3 mostra justamente a característica do sinal no tempo que gera esse problema.
 
 ![Switch_Debounce_2](Figuras/Switch_Debounce_2.png)
 <small>Fonte - https://www.geeksforgeeks.org/switch-debounce-in-digital-circuits/.</small>
 
-Existem várias maneiras de resolver esse problema e a essas soluções damos o nome de *debounce*. Vamos mostrar uma das possíveis maneiras de fazer *debouce* por software. Ela não é muito diferente da mostrada em um exemplo dentro da própria IDE do Arduino, mas tentaremos quebrar ela em partes para simplificar o entendimento.
-
-Primeiramente um código que apenas inverte o valor de um led caso um botão seja apertado:
+Soluções para que isto não cause problema são chamadas de *debounce*. Há debounces em hardware e em software, como abaixo.
 
 ```c
 // UFPE - DEMEC - SD1 - 2023.2 
@@ -460,7 +522,7 @@ Primeiramente um código que apenas inverte o valor de um led caso um botão sej
 #define D3 11
 #define D4 10
 //Constantes de Tempo
-#define DELAY_DEBOUCE  50 //Tempo esperado para o sinal estabilizar
+#define DELAY_DEBOUNCE  50 //Tempo esperado para o sinal estabilizar
 
 
 // Definindo variaveis globais
@@ -482,7 +544,7 @@ void loop()
   {                                               // apertado.
     botaoEstado = botaoLido;                      // Atualiza o valor do estado 
                                                   // do Botao;
-    delay(DELAY_DEBOUCE);                         // Espera um tempo para o 
+    delay(DELAY_DEBOUNCE);                         // Espera um tempo para o 
                                                   // sinal se estabilizar;
     botaoLido = digitalRead(S2);                  // Le novamente o botao
     if(botaoLido == botaoEstado)                  // Se o botao continua 
@@ -495,23 +557,17 @@ void loop()
 }
 ```
 
-Se colocarmos na simulação, veremos que o código funciona. Mas como foi dito, estamos em um ambiente simulado, mesmo sem essa sistema de *debounce* provavelmente o sistema iria funcionar. Logo, um teste em um ambiente real é necessário para testar a solução apresentada. Outra coisa importante é que esse tempo de *delay* para o *debounce* vai depender muito da qualidade dos botões e das ligações elétricas utilizadas. 
+---
 
-### Usando um *Delay* Não Blocante
+### *Delay* Não Blocante
 
-Embora o código mostrado na Seção 4.2 funcione, ele é pouco prático em um sistema onde tenhamos várias coisas funcionando ``ao mesmo tempo''. Pois sempre que a condição do `if` a seguir for verdadeira:
-```c
-if((botaoLido == LOW) && (botaoEstado == HIGH)
-```
+O código anterior é pouco prático pois trava a execução de qualquer outra coisa por `DELAY_DEBOUNCE`.
 
-O nosso sistemas irá ficar parado pelo tempo configurado em 
-```c
-#define DELAY_DEBOUCE  50 //Tempo esperado para o sinal estabilizar
-```
+Como contar o tempo sem comprometer o funcionamento do restante do código?
 
-Por isso, necessitamos uma maneira de contar o tempo de forma não comprometer o funcionamento do restante do código. Como tudo em programação, existem diferentes soluções, iremos mostrar um delas a partir do uso da função `millis()`.
+Um possível solução  usa a função `millis()`.
 
-Esta função devolve um número de 32 bits sem sinal (ou seja, um `unsigned long`) com o tempo em milissegundos desde que a placa foi ligada. Com isso, podemos contar a passagem de tempo apenas atualizando uma base de tempo e comparando com o retorno da função `mills()`. Modificando o algoritmo apresentado na Seção 4.2, teremos:
+Esta função retorna um `unsigned long` com o tempo em milissegundos desde que a placa foi ligada. Modificando o algoritmo apresentado na Seção 4.2, teremos:
 
 ```c
 // UFPE - DEMEC - SD1 - 2023.2
@@ -577,10 +633,3 @@ void loop()
   digitalWrite(D3, ledEstado);                    // Atualiza a saida do led;
 }
 ```
-
-Note ainda que a contagem de tempo é reiniciada sempre que o botão vai de um para zero. Logo, o código força que o led só tenha seu valor invertido depois de passar 50 ms com o valor do botão estável em zero.
-
-## Bibliografia
-
-* bibliografia.bib
-
