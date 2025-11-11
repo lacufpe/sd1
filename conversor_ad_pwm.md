@@ -1,12 +1,10 @@
 # Entradas e Saídas "Analógicas"
 ## Conversor AD e PWM
 
-**ME575 - Sistemas Digitais 1**
+**João Paulo Cerquinho Cajueiro**
 
-José Rodrigues de Oliveira Neto  
+Baseado em slides de Prof. José Rodrigues de Oliveira Neto  
 Universidade Federal de Pernambuco  
-Departamento de Engenharia Mecânica  
-2023.2
 
 ---
 
@@ -41,9 +39,9 @@ A partir das bibliotecas disponíveis na plataforma Arduino
 O microcontrolador da placa Arduino Uno R3, o **ATmega328P**, possui:
 
 - Conversor AD (analog-to-digital) de Aproximações Sucessivas
-- **10 bits** de resolução
-- **6 canais** de captura ligados aos pinos **A0** ao **A5**
-- Configuração transparente ao projetista
+  - **10 bits** de resolução
+  - **6 canais** de captura ligados aos pinos **A0** ao **A5**
+  - Configuração transparente ao projetista
 
 ---
 
@@ -58,7 +56,7 @@ Para utilizar o conversor AD, basta usar:
 <!-- .slide: id="analogread" -->
 ## Função analogRead()
 
----
+--
 
 ### Características
 
@@ -66,7 +64,7 @@ Para utilizar o conversor AD, basta usar:
 - Conversor analógico-digital de **10 bits** e **6 canais** (Pinos A0 a A5)
 - Mapeia tensões entre **0V** e **5V** para valores inteiros entre **0** e **1023**
 
----
+--
 
 ### Resolução do Conversor
 
@@ -100,7 +98,7 @@ analogRead(pino)
 <!-- .slide: id="analogreference" -->
 ## Função analogReference()
 
----
+--
 
 ### Propósito
 
@@ -112,7 +110,7 @@ Configura a tensão de referência alta **VRefH** para entrada analógica
 analogReference(tipo)
 ```
 
----
+--
 
 ### Parâmetros - Tipo
 
@@ -120,7 +118,7 @@ analogReference(tipo)
 - **INTERNAL**: referência interna igual a 1,1V no ATmega328P
 - **EXTERNAL**: tensão aplicada ao pino AREF é usada como referência (0 a 5V apenas)
 
----
+--
 
 ### ⚠️ ADVERTÊNCIAS
 
@@ -143,14 +141,13 @@ analogReference(tipo)
 
 ---
 
-### O que é PWM?
+### PWM?
 
-**PWM (Pulse Width Modulation)** é uma técnica utilizada por sistemas digitais para:
-- Variação do valor médio de uma forma de onda periódica
-- Manter a frequência de uma onda quadrada fixa
-- Variar o tempo que o sinal fica em nível lógico alto (**duty cycle**)
+**PWM (Pulse Width Modulation)** 
+- técnica utilizada por sistemas digitais para variar o valor médio de uma forma de onda periódica
+- Mantém a frequência de uma onda quadrada fixa e varia o tempo que o sinal fica em nível lógico alto (**duty cycle**)
 
----
+--
 
 ### Duty Cycle
 
@@ -159,17 +156,16 @@ analogReference(tipo)
 Para calcular o valor médio da tensão de saída:
 
 ```
-Vout = (duty cycle / 100) × Vcc
+Vout = (duty cycle) × Vcc
 ```
 
 Onde:
-- **duty cycle**: valor do ciclo ativo do PWM em %
+- **duty cycle**: valor do ciclo ativo do PWM - fração de 0 a 1.
 - **Vcc**: tensão de alimentação em V
-- **duty cycle** varia de 0 a 100%
 
----
+--
 
-### Exemplos de Duty Cycle
+## Exemplos de Duty Cycle
 
 | Duty Cycle | Tensão de Saída (Vcc = 5V) |
 |------------|----------------------------|
@@ -179,7 +175,7 @@ Onde:
 | 75% | 3,75V |
 | 100% | 5V |
 
----
+--
 
 ### Aplicações do PWM
 
@@ -192,10 +188,6 @@ Onde:
 
 <!-- .slide: id="pwm-arduino" -->
 ## PWM no Arduino
-
----
-
-### Pinos PWM
 
 A placa Arduino UNO R3 possui pinos específicos para saídas PWM:
 
@@ -230,7 +222,13 @@ analogWrite(pino, valor)
 - **pino**: o pino escolhido (3, 5, 6, 9, 10 ou 11)
 - **valor**: o duty cycle (entre 0 - sempre desligado - e 255 - sempre ligado)
 
----
+--
+
+### Mas não era entre 0 e 1?
+
+O arduino usa um timer para dividir o tempo do pulso em $2^N = 256$ partes.
+
+--
 
 <!-- .slide: id="codigo-exemplo" -->
 ## Código Exemplo
@@ -254,7 +252,7 @@ Código que lê um potenciômetro e controla a luminosidade de um LED via PWM:
 
 //TEMPOS
 #define TEMPO_ADC      100 //Tempo entre leituras do ADC
-#define TEMPO_SERIAL   200 //Tempo entre enviar dados pela serial
+#define TEMPO_SERIAL   2000 //Tempo entre enviar dados pela serial
 ```
 
 ---
@@ -263,9 +261,13 @@ Código que lê um potenciômetro e controla a luminosidade de um LED via PWM:
 
 ```c
 //VARIAVEIS GLOBAIS
-unsigned int gValorLidoADC = 0;        //guarda o ultimo valor lido do conversor ADC
-unsigned long gTempoADC      = millis(); //Tempo para atualizar ADC
-unsigned long gTempoSerial   = millis(); //Tempo para enviar dados pela Serial
+unsigned int gValorLidoADC = 0;  // guarda o ultimo valor lido do conversor ADC
+unsigned int gValorSaidaPWM = 0; // guarda o ultimo valor do PWM
+unsigned long gTempoADC;         // Contador de tempo para atualizar ADC
+unsigned long gTempoSerial;      // Contador de tempo para enviar dados pela Serial
+
+bool gAtualiza = false;
+
 ```
 
 ---
@@ -278,6 +280,9 @@ void setup() {
   Serial.begin(9600); // abre a porta serial a 9600 bps
   //SAIDAS
   pinMode(LED_PWM, OUTPUT);
+  // inicializa os contadores de tempo;
+  gTempoADC = millis() + TEMPO_ADC;
+  gTempoSerial = millis() + TEMPO_SERIAL;
 }
 ```
 
@@ -287,7 +292,8 @@ void setup() {
 
 ```c
 void loop() {
-  fFazLeituraADC();    // Faz leitura do ADC e atualiza o Duty Cicle do PWM
+  gAtualiza = fFazLeituraADC();    // Faz leitura do ADC e seta para atualiza o Duty Cicle do PWM
+  fAtualizaSaida(gAtualiza);    // Atualiza o Duty Cicle do PWM
   fEnviaSerial();      // Envia dados pela Serial
 }
 ```
@@ -297,16 +303,32 @@ void loop() {
 ### Função de Leitura ADC
 
 ```c
-void fFazLeituraADC() {
+bool fFazLeituraADC() {
   unsigned long tempoAtual = millis();
-  if((tempoAtual - gTempoADC) > TEMPO_ADC) //Verifica se passou 100 ms
+  bool atualiza = ( tempoAtual >= gTempoADC ); //Verifica se passou 100 ms
+  if(atualiza)
   {
-    gTempoADC = tempoAtual;                    //Atualiza o tempo atual
+    gTempoADC += TEMPO_ADC;        //Atualiza o tempo atual
     gValorLidoADC = analogRead(POTENCIOMETRO); //Faz uma leitura do ADC
-    analogWrite(LED_PWM,map(gValorLidoADC, 0, 1023, 0, 255)); //Atualiza o PWM                              
   }
+  return atualiza; // Indica se fez ou não uma medida
 }
 ```
+
+---
+
+### Função de Atualização da saída
+
+```c
+unsigned int fAtualizaSaida( bool atualiza ) {
+  if (atualiza)
+  {
+    gValorSaidaPWM = map(gValorLidoADC, 0, 1023, 0, 255) // converte da escala do analogRead para a do analogWrite
+    analogWrite(LED_PWM, gValorSaidaPWM); //Atualiza o PWM                              
+  }  
+}
+```
+
 
 ---
 
@@ -315,18 +337,18 @@ void fFazLeituraADC() {
 ```c
 void fEnviaSerial() {
   unsigned long tempoAtual = millis(); //Pega o tempo atual
-  if((tempoAtual - gTempoSerial) > TEMPO_SERIAL) //Ve se passou 200 ms
+  if(tempoAtual >= gTempoSerial) //Ve se passou 200 ms
   {
-    gTempoSerial = tempoAtual; //Atualiza a contagem de tempo
+    gTempoSerial += TEMPO_SERIAL; //Atualiza a contagem de tempo
     Serial.print("Valor ADC: "); 
     Serial.print(gValorLidoADC);
-    Serial.print(" Valor DutyCicle: ");
-    Serial.println(map(gValorLidoADC, 0, 1023, 0, 255));
+    Serial.print(" Valor DutyCycle: ");
+    Serial.println(gValorSaidaPWM);
   }
 }
 ```
 
----
+--
 
 ### Função map()
 
@@ -350,27 +372,13 @@ map(gValorLidoADC, 0, 1023, 0, 255)
 
 ---
 
-## Conceitos Importantes
-
-### Temporização
-- Sistema usa `millis()` para controle temporal não-bloqueante
-- Leitura ADC a cada 100ms
-- Envio serial a cada 200ms
-
-### Resolução
-- ADC: 10 bits (0-1023)
-- PWM: 8 bits (0-255)
-- Mapeamento necessário para compatibilidade
-
----
-
 ## Resumo
 
 - **Entradas Analógicas**: Uso de `analogRead()` nos pinos A0-A5
-- **Saídas PWM**: Uso de `analogWrite()` nos pinos 3,5,6,9,10,11  
+- **Saídas PWM**: Uso de `analogWrite()` nos pinos 3, 5, 6, 9, 10 e 11  
 - **Resolução**: ADC 10 bits, PWM 8 bits
 - **Aplicação**: Controle analógico através de sinais digitais
-- **Temporização**: Controle não-bloqueante com `millis()`
+- **Temporização**: Controle não-blocante com `millis()`
 
 ---
 
@@ -379,12 +387,3 @@ map(gValorLidoADC, 0, 1023, 0, 255)
 - Arduino Reference Documentation
 - ATmega328P Datasheet - Microchip Technology
 - Documentação das funções Arduino disponível em: arduino.cc/reference
-
----
-
-## Obrigado!
-
-**Perguntas?**
-
-José Rodrigues de Oliveira Neto  
-joserodrigues.oliveiraneto@ufpe.br

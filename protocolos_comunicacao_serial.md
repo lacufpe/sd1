@@ -25,47 +25,40 @@ Departamento de Engenharia Mecânica
 
 ### Contexto dos Sistemas Embarcados
 
-- Os equipamentos eletrônicos agregam cada vez mais funções
-- A utilização de diversos circuitos integrados em um mesmo sistema embarcado é mandatória
+- Sistemas com cada vez mais funções
+- Requer uso de vários circuitos integrados em um mesmo sistema embarcado
 - A comunicação entre diferentes sistemas embarcados também é uma necessidade
-- A comunicação dos elementos dentro do microcontrolador (CPU, memórias e periféricos) é normalmente feita de forma paralela
+- Comunicação pode ser **paralela** (N bits de cada vez) ou **serial** (um bit por vez)
 
 ---
 
-### Limitações dos Barramentos Paralelos
+### Barramentos Paralelos
 
-- Não é interessante estender longos barramentos de comunicação paralelos
-- Seja em uma placa de circuito impresso (PCB)
-- Ou entre sistemas embarcados
+- Tipicamente a comunicação do processador com a memória e os periféricos internos é paralela
+- Para ligação entre chips ou entre placas há problemas:
+  - Muitos fios ou trilhas - impacta tamanho e custo.
+  - Sincronismo é complicado.
 - Diversas tecnologias de interligação serial de dispositivos foram desenvolvidas
 
 ---
 
-### Classificação dos Protocolos
+### Protocolos Seriais
 
-**Protocolos Assíncronos:**
-- Não possuem um sinal de sincronismo dedicado (clock) participando da transmissão
+**Protocolos Assíncronos**
+- Não possuem um sinal exclusivo de sincronismo dedicado (clock) participando da transmissão
 
-**Protocolos Síncronos:**
+**Protocolos Síncronos**
 - O sinal de sincronismo é um dos sinais que participam da comunicação
-
----
-
-### Principais Protocolos em Sistemas Microcontrolados
-
-- **SPI - Serial Peripheral Interface**
-- **I2C - Inter-Integrated Circuit**
-- **UART - Universal Asynchronous Receiver Transmitter**
 
 ---
 
 ### Comparação dos Protocolos
 
-| Protocolo | Barramento (Fios) | Taxa Máxima | Fluxo de Dados |
-|-----------|-------------------|-------------|----------------|
-| UART (RS232) | 2 | 115200 bps | Half ou Full Duplex |
-| SPI | 3 + nº de Slaves | 2 Mbps | Full Duplex |
-| I2C | 2 | 400 Kbps | Half Duplex |
+| Protocolo | Tipo | Barramento (Fios) | Taxa Máxima | Fluxo de Dados |
+|-----------|------|-------------------|-------------|----------------|
+| UART (RS232) | Assíncrono | 2 | 115200 bps | Half ou Full Duplex |
+| SPI | Síncrono | 3 + nº de Slaves | 2 Mbps | Full Duplex |
+| I2C | Síncrono | 2 | 400 Kbps | Half Duplex |
 
 **Legenda:**
 - bps - bits por segundo
@@ -77,13 +70,14 @@ Departamento de Engenharia Mecânica
 <!-- .slide: id="spi" -->
 ## Protocolo SPI
 
+### Serial Periphery Interface
+
 ---
 
 ### Características do SPI
 
-- A interface SPI (Serial Peripheral Interface) foi desenvolvida pela Motorola em meados da década de 1980
-- Trata-se de uma comunicação síncrona que opera no modo full-duplex
-- Suporta um dispositivo master e um ou mais slaves conectados no barramento
+- Desenvolvida pela Motorola na década de 1980
+- Suporta um dispositivo mestre e um ou mais escravos conectados no barramento
 - Caracteriza-se pela simplicidade e eficiência, podendo alcançar velocidades de até 70 MHz
 
 ---
@@ -97,25 +91,15 @@ O barramento é composto por quatro linhas de comunicação:
 - **MISO:** master-input, slave-output
 - **SS/CS/TE:** slave select
 
----
-
-### Funcionamento do Protocolo SPI
-
----
-
-#### Seleção de Dispositivos
-
-- Na comunicação SPI, os dispositivos configurados como slave são selecionados pelo pino SS
-- Essa característica, associada à capacidade de operar no modo full-duplex, permite que a interface SPI alcance taxas de comunicação superiores
-- A seleção dos dispositivos slave pode ser feita tanto em nível lógico '1' quanto em nível lógico '0', sendo esta última mais comum
-
----
+--
 
 #### Transferência de Dados
 
-- Os dados transferidos são normalmente representados por 8 bits
+- Escravos são selecionados pelo pino SS.
+- A cada pulso do clock é transmitido 1 bit em cada direção.
 - A transmissão pode ser iniciada pelo LSB (least significant bit) ou pelo MSB (most significant bit), variando conforme o dispositivo
 - O sinal de clock pode ser configurado de quatro formas distintas, combinando polaridade (CKP) e fase (CKE)
+- Os dados transferidos são normalmente representados por 8 bits
 
 ---
 
